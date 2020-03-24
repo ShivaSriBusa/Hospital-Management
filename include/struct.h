@@ -1,5 +1,5 @@
 #include<stdio.h>
-#define size 20
+#define size 10
 
 struct patient
 {
