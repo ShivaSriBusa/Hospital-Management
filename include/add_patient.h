@@ -18,9 +18,9 @@ struct patient
 
     //For storing doctors name
     char *doc_name;
-    
+
 }p1;
 
-/* Function "add_patient" takes input from hospital, details of patients and stores it in "patient_record.csv" */
+/* Function "add_patient" takes input from hospital, details of patients and stores it in "patient_record.csv". Return type is void */
 
 void add_patient();
