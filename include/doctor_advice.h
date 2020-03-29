@@ -1,1 +1,1 @@
-int doctor_advice(char *name,char *ph); //Function for patient's advice!
+int doctor_advice(char *name,char *ph); //Function for advice!
