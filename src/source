@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "include/add_patient.h"
+#include "include/welcomeMessage.h"
+#include "include/visitor_info.h"
+#include "include/add_visitor.h"
+#include "include/Advice.h"
+#include "include/count_admit.h"
+#include "include/count_visitor.h"
+#include "include/disease.h"
+#include "include/display_advice.h"
+#include "include/display_single_patient.h"
+#include "include/display_single_visitor.h"
+#include "include/id_generate.h"
+#include "include/read_patient.h"
+#include "include/rooms.h"
+#include "include/Search_in_File.h"
+#define size 10
