@@ -1,0 +1,1 @@
+int display_advice(char *name,char *ph);
