@@ -1,6 +1,22 @@
+/**
+ * @file add_patient.h
+ *
+ * @brief A collection of structure and function related to storing patient details in "patient_records.csv".
+ *
+ * @author sreeram sankarasubramanian - sreeramsankarasubram@cmail.carleton.ca
+ * 
+ */
+
 #define size 10
 
-/* Structure containing necessary variables to store the details of patients */
+
+/**
+ * @brief A Structure containing necessary variables to store the details of patients.
+ * 
+ * @details Patient information can be stored using variables of structure struct patient.
+ * Everything is stored in the form of character array and character pointer.
+ * 
+ */
 
 struct patient 
 {
@@ -21,6 +37,14 @@ struct patient
 
 }p1;
 
-/* Function "add_patient" takes input from hospital, details of patients and stores it in "patient_record.csv". Return type is void */
+/**
+ * @brief A Function to store the details of patients in "patient_record.csv".
+ * 
+ * @details Function "add_patient" takes input from hospital, details of patients and stores it in "patient_record.csv". 
+ * Invokes disease function which identifies symptom and allocates room accordingly based on availability.
+ * 
+ * @return Return value is void.
+ *
+ */ 
 
 void add_patient();
