@@ -8,8 +8,8 @@ struct patient
     char *name, *doc_name, *address, *symp, *medication, *allergies,*status;
 }p1;
 
-struct visitor
+struct patient_advise
 {
-    char phoneNo[size];
-    char *name,*address;
-}v1;
+   char *precaution, *diet_advise, *prescription;
+}a1;
+
