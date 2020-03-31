@@ -112,8 +112,7 @@ int Search_in_File(char* fname, char* str, char* ph)
         fprintf(fstream,"%d,%s,%s,%s,%s\n",id,str,ph,p1.date_release,p1.time_release);
         fclose(fstream);
         fptr1=fopen("patient_record.csv","r");
-        if (!fptr1)
-        {
+        if (!fptr1){
             printf("Unable to open the input file!!\n");
             return 0;
         }
@@ -127,41 +126,33 @@ int Search_in_File(char* fname, char* str, char* ph)
         {
             field_count = 0;
             row_count++;
-            if (row_count == 1)
-            {
+            if (row_count == 1){
                 continue;
             }
             field = strtok(string, ",");
             token=field;
             token = strtok(NULL, ",");
-            if(strcmp(token,str)==0)
-            {
+            if(strcmp(token,str)==0){
                 token = strtok(NULL, ",");
-                if(strcmp(token,ph)==0)
-                {
+                if(strcmp(token,ph)==0){
                     id=id_generate("temp.csv");
                     fprintf(fptr2,"%d,",row_count-1);
-                while (field)
-                {
-                    if(field_count==0)
-                    {
+                while (field){
+                    if(field_count==0){
                         fprintf(fptr2,"%s,",str);
                         field = strtok(NULL, ",");
                         field_count++;
                     }
-                    if(field_count==11)
-                    {
+                    if(field_count==11){
                         field=(char *)malloc(100);
                         fprintf(fptr2,"Yes");
                         free(field);
                     }
-                    if(field_count==1)
-                    {
+                    if(field_count==1){
                         fprintf(fptr2,"%s,",token);
                         field_count++;
                     }
-                    if(field_count!=1)
-                    {
+                    if(field_count!=1){
                         fprintf(fptr2,"%s,",field);
                         field = strtok(NULL, ",");
                         field_count++;
@@ -172,24 +163,20 @@ int Search_in_File(char* fname, char* str, char* ph)
             }
                  else
                 {
-                while(field)
-                {
-                if(field_count==1)
-                {
+                while(field){
+                if(field_count==1){
                     fprintf(fptr2,"%s,",token);
                     field_count++;
                 }
-                 if(field_count!=1)
-                    {
-                        fprintf(fptr2,"%s,",field);
-                        field = strtok(NULL, ",");
-                        field_count++;
+                if(field_count!=1){
+                    fprintf(fptr2,"%s,",field);
+                    field = strtok(NULL, ",");
+                    field_count++;
                     }
-                if(field_count==12)
-                    {
-                        fprintf(fptr2,"%s",field);
-                        field = strtok(NULL, ",");
-                        field_count=0;
+                if(field_count==12){
+                    fprintf(fptr2,"%s",field);
+                    field = strtok(NULL, ",");
+                    field_count=0;
                     }
                 }
                 }
