@@ -119,7 +119,7 @@ int Search_in_File(char* fname, char* str, char* ph)
         }
         fptr2=fopen("temp.csv","w");
 
-        // copy all contents to the temporary file other except specific line
+        // copy all contents from "patient_record.csv" to the temporary file "temp.csv" other except specific line.
 
         fprintf(fptr2,"ID,Name,Phone Number,Address,Emergency Phone Number,Date of admission (DD-MM-YYYY),");
         fprintf(fptr2,"Time of admission (HH:MM),Symptoms,Doctors name,Identity Number,Medications,Allergies,Discharge status\n");
