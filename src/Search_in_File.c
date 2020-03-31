@@ -68,120 +68,138 @@ int Search_in_File(char* fname, char* str, char* ph)
     fstream = fopen("discharged_list.csv", "a");
 
     // Open the file "patient_record" passed as input paramenter. If the file is not found returns -1.
-    if ((fp = fopen(fname, "r")) == NULL) {
-        return(-1);
+    
+	if((fp = fopen(fname, "r")) == NULL) {
+	return(-1);
     }
 
     // If the file "patient_record" is found invoke "display_single_patient" and store return value to flag.
-    flag = display_single_patient(str, ph);
+    flag=display_single_patient(str,ph);
 
     // If flag is -1 function terminates and returns to main.
-    if (flag == -1) {
+    if(flag==-1){
         return 0;
     }
 
-    // Else check the "Discharge status" of the patient.
-    else 
+    // Else check the "Discharge status" of the patient.    
+    else
     printf("\nIs the patient discharged? (Y/N) :");
-    scanf("%c", &inp);
+    scanf("%c",&inp);
     fgetc(stdin);
+
     // If Discharged return to main as patient is already discharged
-    if (inp == 'Y') {
-        return 0;
+    if(inp=='Y'){
+    return 0;
     }
+
     // Else discharge the patient  or invoke "Advice.c" to enter doctor's advice, prescription and precaution. 
-    else 
+    else
     printf("\nDo you want to discharge now? (Y/N) :");
-    scanf("%c", &inp);
+    scanf("%c",&inp);
     fgetc(stdin);
-    if (inp == 'N') {
-        Advice(str, ph);
+    if(inp=='N'){
+    Advice(str,ph);
     }
+
     // If dischrged, enter release time and date and store in "discharged_list.csv" file.  
     // Also update the "patient_record.csv" files "Discharge_status" to "yes".
     else {
-        id = id_generate("discharged_list.csv");
+        id=id_generate("discharged_list.csv");
         printf("\nPlease input date of release (DD-MM-YYYY) : ");
         gets(p1.date_release);
         printf("\nPlease input time of release (HH:MM): ");
         gets(p1.time_release);
-        fprintf(fstream, "%d,%s,%s,%s,%s\n", id, str, ph, p1.date_release, p1.time_release);
+        fprintf(fstream,"%d,%s,%s,%s,%s\n",id,str,ph,p1.date_release,p1.time_release);
         fclose(fstream);
-        fptr1 = fopen("patient_record.csv", "r");
-        if (!fptr1){
+        fptr1=fopen("patient_record.csv","r");
+        if (!fptr1)
+        {
             printf("Unable to open the input file!!\n");
             return 0;
         }
-        fptr2 = fopen("temp.csv", "w");
-        // Updating "patient_reocrd.csv" file by copying all contents to the temporary file "temp.csv".
-        fprintf(fptr2, "ID,Name,Phone Number,Address,Emergency Phone Number,Date of admission (DD-MM-YYYY),");
-        fprintf(fptr2, "Time of admission (HH:MM),Symptoms,Doctors name,Identity Number,Medications,Allergies,Discharge status\n");
-        while (fgets(string, 1024, fptr1)){
+        fptr2=fopen("temp.csv","w");
+
+        // copy all contents to the temporary file other except specific line
+
+        fprintf(fptr2,"ID,Name,Phone Number,Address,Emergency Phone Number,Date of admission (DD-MM-YYYY),");
+        fprintf(fptr2,"Time of admission (HH:MM),Symptoms,Doctors name,Identity Number,Medications,Allergies,Discharge status\n");
+        while (fgets(string, 1024, fptr1))
+        {
             field_count = 0;
             row_count++;
-            if (row_count == 1) {
+            if (row_count == 1)
+            {
                 continue;
             }
             field = strtok(string, ",");
-            token = field;
+            token=field;
             token = strtok(NULL, ",");
-            if (strcmp(token, str) == 0) {
+            if(strcmp(token,str)==0)
+            {
                 token = strtok(NULL, ",");
-                if (strcmp(token, ph) == 0) {
-                    id = id_generate("temp.csv");
-                    fprintf(fptr2, "%d,", row_count - 1);
-                    while (field){
-                        if (field_count == 0) {
-                            fprintf(fptr2, "%s,", str);
-                            field = strtok(NULL, ",");
-                            field_count++;
-                        }
-                        if (field_count == 11) {
-                            field = (char*)malloc(100);
-                            fprintf(fptr2, "Yes");
-                            Free(field);
-                        }
-                        if (field_count == 1) {
-                            fprintf(fptr2, "%s,", token);
-                            field_count++;
-                        }
-                        if (field_count != 1) {
-                            fprintf(fptr2, "%s,", field);
-                            field = strtok(NULL, ",");
-                            field_count++;
-                        }
-                    }
-                }
-            }
-            else {
-                while (field){
-                    if (field_count == 1) {
-                        fprintf(fptr2, "%s,", token);
-                        field_count++;
-                    }
-                    if (field_count != 1) {
-                        fprintf(fptr2, "%s,", field);
+                if(strcmp(token,ph)==0)
+                {
+                    id=id_generate("temp.csv");
+                    fprintf(fptr2,"%d,",row_count-1);
+                while (field)
+                {
+                    if(field_count==0)
+                    {
+                        fprintf(fptr2,"%s,",str);
                         field = strtok(NULL, ",");
                         field_count++;
                     }
-                    if (field_count == 12) {
-                        fprintf(fptr2, "%s", field);
-                        field = strtok(NULL, ",");
-                        field_count = 0;
+                    if(field_count==11)
+                    {
+                        field=(char *)malloc(100);
+                        fprintf(fptr2,"Yes");
+                        free(field);
                     }
+                    if(field_count==1)
+                    {
+                        fprintf(fptr2,"%s,",token);
+                        field_count++;
+                    }
+                    if(field_count!=1)
+                    {
+                        fprintf(fptr2,"%s,",field);
+                        field = strtok(NULL, ",");
+                        field_count++;
+                    }
+                    //printf("%s\n",token);
+                }
                 }
             }
+                 else
+                {
+                while(field)
+                {
+                if(field_count==1)
+                {
+                    fprintf(fptr2,"%s,",token);
+                    field_count++;
+                }
+                 if(field_count!=1)
+                    {
+                        fprintf(fptr2,"%s,",field);
+                        field = strtok(NULL, ",");
+                        field_count++;
+                    }
+                if(field_count==12)
+                    {
+                        fprintf(fptr2,"%s",field);
+                        field = strtok(NULL, ",");
+                        field_count=0;
+                    }
+                }
+                }
+
         }
         fclose(fptr1);
         fclose(fptr2);
-        // Remove the old "patient_record.csv" and rename the "temp.csv" to be the updated "patient_record.csv" file.
+         // Remove the old "patient_record.csv" and rename the "temp.csv" to be the updated "patient_record.csv" file.
         remove("patient_record.csv");
-        rename("temp.csv", "patient_record.csv");
+        rename("temp.csv","patient_record.csv");
     }
     return 0;
 }
-
-
-
-
-
