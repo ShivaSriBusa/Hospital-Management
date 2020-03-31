@@ -89,7 +89,7 @@ int Search_in_File(char* fname, char* str, char* ph)
         if (inp == 'Y') {
             return 0;
         }
-            // Else discharge the patient  or invoke "Advice.c" to enter doctor's advice, prescription and precaution. 
+        // Else discharge the patient  or invoke "Advice.c" to enter doctor's advice, prescription and precaution. 
         else {
             printf("\nDo you want to discharge now? (Y/N) :");
             scanf("%c", &inp);
@@ -97,8 +97,8 @@ int Search_in_File(char* fname, char* str, char* ph)
             if (inp == 'N') {
                 Advice(str, ph);
             }
-                // If dischrged, enter release time and date and store in "discharged_list.csv" file.  
-                // Also update the "patient_record.csv" files "Discharge_status" to "yes".
+            // If dischrged, enter release time and date and store in "discharged_list.csv" file.  
+            // Also update the "patient_record.csv" files "Discharge_status" to "yes".
             else {
                 id = id_generate("discharged_list.csv");
                 printf("\nPlease input date of release (DD-MM-YYYY) : ");
