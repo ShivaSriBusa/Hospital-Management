@@ -183,7 +183,7 @@ int Search_in_File(char* fname, char* str, char* ph)
         }
         fclose(fptr1);
         fclose(fptr2);
-         // Remove the old "patient_record.csv" and rename the "temp.csv" to be the updated "patient_record.csv" file.
+        // Remove the old "patient_record.csv" and rename the "temp.csv" to be the updated "patient_record.csv" file.
         remove("patient_record.csv");
         rename("temp.csv","patient_record.csv");
     }
