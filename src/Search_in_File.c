@@ -122,8 +122,7 @@ int Search_in_File(char* fname, char* str, char* ph)
 
         fprintf(fptr2,"ID,Name,Phone Number,Address,Emergency Phone Number,Date of admission (DD-MM-YYYY),");
         fprintf(fptr2,"Time of admission (HH:MM),Symptoms,Doctors name,Identity Number,Medications,Allergies,Discharge status\n");
-        while (fgets(string, 1024, fptr1))
-        {
+        while (fgets(string, 1024, fptr1)){
             field_count = 0;
             row_count++;
             if (row_count == 1){
