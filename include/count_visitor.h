@@ -16,7 +16,7 @@
  * 
  * @param[in] fname the name of the file form which the number of visitors will be counted.
  * 
- * @return Returns number of visitors as count if the file is read succesfully. 
+ * @return Returns number of visitors as count if the file is read successfully. 
  * returns -1 if the file cannot be opened.
  * 
  */
