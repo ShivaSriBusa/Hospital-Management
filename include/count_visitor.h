@@ -21,4 +21,4 @@
  * 
  */
 
-int count_visitor(char fname);
+int count_visitor(char *fname);
