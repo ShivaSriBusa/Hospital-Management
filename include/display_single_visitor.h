@@ -14,7 +14,10 @@
  * @details This function displays the visitor information on consle window by searching
  * the visited patients name and phone number from the file "visitor_info.csv". 
  * 
- * @param[in] The function takes name and phone number of the patient as input parameter.
+ * @param[in] name a charachter pointer that will contain the name of a patient for whom the visitor
+ * information is to be displayed.
+ * @param[in] ph a character pointer that will contain the phone number of a patient for whom the visitor
+ * information is to be displayed.
  * 
  * @return Return type is integer. It returns zero displaying appropriate message to the console window
  * and returns back to main.

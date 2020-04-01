@@ -14,7 +14,7 @@
  * @details The function reads the "visitor_info.c" file and counts
  * total number of visitor visited.
  * 
- * @param[in] the function takes a filename as input parameter.
+ * @param[in] fname the name of the file form which the nummber of visitors will be counted.
  * 
  * @return Returns number of visitor as count if the file is read succesfully. 
  * returns -1 if the file cannot be opened.

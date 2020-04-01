@@ -22,7 +22,9 @@
  * date. And if the patient is not discharged it allows the user to input doctor's advice, prescription 
  * and precatuions by invoking a separate function "Advice".
  * 
- * @param[in] It takes file name, patient's name and patient's phone number as input parameter.
+ * @param[in] fname name of a file from which the patient will be searched.
+ * @param[in] str name of a character poninter that will contain the name of a patient to be searched.
+ * @param[in] ph name of a character pointer that will contain the phone number of a patient to be searched
  * 
  * @return the function returns integer. Returns 0 if the function is executed successfully. Returns -1
  * if the input patient name and phone number is not found in the given file "patient_record.csv".
