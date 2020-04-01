@@ -34,5 +34,7 @@ int count_visitor(char *fname)
 	 count++;
 	}while((getc(fptr))!=EOF);
     fclose(fptr);
+
+    // returns count-1 as the first row contains heading for each coloum.
     return count-1;
 }
