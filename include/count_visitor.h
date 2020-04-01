@@ -9,7 +9,7 @@
 
 /**
  * @brief A function to count number of visitors from the file 
- * "visitor_info.c"
+ * "visitor_info.csv"
  * 
  * @details The function reads the "visitor_info.c" file and counts
  * total number of visitor visited.
