@@ -12,11 +12,11 @@
  * "visitor_info.csv"
  * 
  * @details The function reads the "visitor_info.c" file and counts
- * total number of visitor visited.
+ * total number of visitors visited.
  * 
- * @param[in] fname the name of the file form which the nummber of visitors will be counted.
+ * @param[in] fname the name of the file form which the number of visitors will be counted.
  * 
- * @return Returns number of visitor as count if the file is read succesfully. 
+ * @return Returns number of visitors as count if the file is read succesfully. 
  * returns -1 if the file cannot be opened.
  * 
  */
