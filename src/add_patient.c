@@ -14,7 +14,7 @@
 #include "../include/id_generate.h"
 #include "../include/disease.h"
 
-/** Here the user will be able to input all the necessary information related to the patient. 
+/** @details Here the user will be able to input all the necessary information related to the patient. 
 
 * Following are the information that will be collected:
 * • Patient Name.
@@ -30,11 +30,14 @@
 * • Allergies.
 * • Discharge status (initially set as No by default)
 *
-* @brief After taking all the information, patient’s symptoms will be checked to identify if he has a chronic disease
+* After taking all the information, patient’s symptoms will be checked to identify if he has a chronic disease
 * or a physical injury. The hospital management will identify the symptom as chronic or physical and will pass the input accordingly.
 * Any patient information whether admitted or not  will be stored by the software in “patient_details.csv” file. 
 * After storing the patient information, Disease function is invoked to check the symptoms and allocate rooms if available. 
 *
+* @param[in] Function has no input parameters.
+*
+* @return Function doesn't return anything. 
 */
 
 void add_patient()
