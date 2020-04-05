@@ -1,7 +1,7 @@
 /*
  * @file display_advice.c
  *
- * @brief Display Welcome message 
+ * @brief Display Welcome Message 
  * 
  * @author Shiva Sri Busa - shivasribusa@cmail.carleton.ca
  * 
