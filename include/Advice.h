@@ -21,4 +21,5 @@ struct patient_advise
    char *precaution, *diet_advise, *prescription;
 }a1;
 
-int Advice(char *pname,char *ph);
+int advice(char *pname,char *ph);
+
