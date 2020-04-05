@@ -16,7 +16,7 @@
 
 
 
-struct patient_advise
+struct patient_advice
 {
    char *precaution, *diet_advise, *prescription;
 }a1;
