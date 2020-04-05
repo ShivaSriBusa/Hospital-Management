@@ -1,5 +1,5 @@
 /*
- * @brief Display Welcome messag
+ * @brief Display Welcome Message
  * 
  * @details Function that prints welcome screen
  * 
