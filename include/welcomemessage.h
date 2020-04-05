@@ -1,6 +1,5 @@
-/**
- * @brief Our software is a prototype designed to work only in local server of hospital,
- *  so it can only be used by one computer at a time.
+/*
+ * @brief Display Welcome messag
  * 
  * @details Function that prints welcome screen
  * 
@@ -15,4 +14,4 @@
 
 
 
-void welcomeMessage();
+void welcomemessage();
