@@ -8,11 +8,10 @@
  */
 
 /**
- * @brief A function to allocate room in general ward/special ward if patient has physical injury/chronic symptoms 
- * based on availability. If none of those symptoms then patient is not admitted.
+ * @brief A function to display patient advice details
  * 
  * @details Here prescription, precaution and diet advice related to a patient will be displayed. 
- * The patient will be searched by his name and number from the �patient_advice.csv� file. 
+ * The patient will be searched by patient name and phone number from the patient_advice.csv file. 
  * Then the corresponding information will be displayed from this file.
  *
  * @param[in] patient name and patient phone number.
