@@ -18,7 +18,7 @@
  * 
  * @return Returns number of visitors as count-1 (subtracting 1 because top row of the file
  * contains header for the coloum) on successful executionand returns -1 if file cannot be opened. 
- * returns -1 if the file cannot be opened.
+ * Returns -1 if the file cannot be opened.
  * 
  */
 
