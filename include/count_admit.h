@@ -1,1 +1,1 @@
-int count_admit() ;
+int count_admit();
