@@ -1,1 +1,1 @@
-int display_single_patient(char *name, char *ph) ;
+int display_single_patient(char *name, char *ph);
