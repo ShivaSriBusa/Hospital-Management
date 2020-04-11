@@ -15,13 +15,13 @@
 * • Visitor Name.
 * • Visitor Phone number.
 *
-* After taking the visitor name and phone number as input, it will check with the patient record from both the files "general_rooms.csv" and "special_rooms.csv".
+* After taking the visitor name and phone number as input, it will pass these parameters to add_visitor function to add visitor details if patient is admitted either in general or special ward.
 * If with the visitor details a match is found in either of the files then the visitor details will be displayed.
 * 
 *
 * @param[in] Function has two input parameters.
 *
-* @return Function returns -1 if the files cannot be found. 
+* @return Function returns 0 on successful exection.. 
 */
 
 int visitor_info(char *name,char *ph)
