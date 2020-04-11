@@ -1,4 +1,4 @@
-#define size 10
+# define size 10
 
 struct visitor
 {
