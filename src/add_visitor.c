@@ -20,12 +20,12 @@
 * • Visitor Phone number.
 *
 * After taking the patient id as input, it will check if the patient is admitted in the hospital at that particular moment.
-* If with the patient id a match is found in the "patient_record.csv" file then the visitor details will be taken as an input and stored in the "visitor.csv" file.
+* If with the patient id a match is found in the "general_rooms.csv" and "special_rooms.csv". Then the visitor details will be taken as an input and stored in the "visitor_info.csv" file.
 * 
 *
 * @param[in] Function has three input parameters.
 *
-* @return Function returns -1 if the file "visitor.csv" where the visitor details will be stored is not found. 
+* @return Function returns -1 if the file "visitor_info.csv" is not found. Stores information and returns 0 on successful execution.
 */
 
 int add_visitor(char *filename,char *str,char*ph)
