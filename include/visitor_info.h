@@ -1,1 +1,1 @@
-int visitor_info(char *name,char *ph);
+int visitor_info(char *name,char *ph) ;
