@@ -25,12 +25,15 @@
 */
 
 
+
 int display_single_patient(char *name, char *ph)
 {
     FILE *fp=fopen("patient_record.csv","r");
 	char string[1024];
     int row_count = 0;
     int field_count = 0;
+    char *field,*token;
+    int n=0;
      if (!fp) {
         printf("Can't open file\n");
         return 0;
@@ -43,8 +46,8 @@ int display_single_patient(char *name, char *ph)
             {
                 continue;
             }
-            char *field = strtok(string, ",");
-            char *token=field;
+            field = strtok(string, ",");
+            token=field;
             token = strtok(NULL, ",");
             if(strcmp(token,name)==0)
             {
@@ -53,6 +56,7 @@ int display_single_patient(char *name, char *ph)
                 {
                     while (field)
                     {
+                        n++;
                         if (field_count == 0) {
                         printf("Id:");
                         printf("%s\n",field);
@@ -133,12 +137,18 @@ int display_single_patient(char *name, char *ph)
                 }
                 else
                 {
-                    printf("\nNo record found!");
+                    printf("\nPhone number did not match!");
+                    fclose(fp);
                     return -1;
                 }
-            }
-
         }
+        else
+        {
+            printf("\nNo record found!");
+            fclose(fp);
+            return -1;
+        }
+    }
     fclose(fp);
     return 0;
 }
