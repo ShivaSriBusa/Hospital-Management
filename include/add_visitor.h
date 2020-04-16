@@ -1,8 +1,6 @@
-#define size 10
-
 struct visitor
 {
-    char phoneNo[size];
+    char phoneNo[11];
     char *name,*address;
 }v1;
 
