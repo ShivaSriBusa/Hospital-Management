@@ -28,9 +28,10 @@
 * @return Function returns -1 if the file "visitor_info.csv" is not found. Stores information and returns 0 on successful execution.
 */
 
+
 int add_visitor(char *filename,char *str,char*ph)
 {
-    int id,field_count=0,row_count=0;
+    int id,field_count=0,row_count=0,t_ph,u_ph;
 	char string[1024];
 	char *token,*field;
 	FILE *fptr1,*fptr2;
@@ -52,16 +53,15 @@ int add_visitor(char *filename,char *str,char*ph)
             {
                 continue;
             }
-            //fprintf(fptr2,"%s,",field);
             field = strtok(string, ",");
             token=field;
             token = strtok(NULL, ",");
-            //printf("%s\n",token);
             if(strcmp(token,str)==0)
             {
                 token = strtok(NULL, ",");
-                //printf("%s",token);
-                if(strcmp(token,ph)==0){
+                t_ph=atoi(token);
+                u_ph=atoi(ph);
+                if(t_ph==u_ph){
                 while (field)
                 {
                     if(field_count==0)
@@ -109,10 +109,14 @@ int add_visitor(char *filename,char *str,char*ph)
                 }
                 }
                  else
-            {
-                printf("\nNo record found!");
+                {
+                    printf("\nPhone number did not match!");
+                }
             }
-            }
+            else
+                {
+                    printf("\nNo record found!");
+                }
         }
             free(v1.name);
             free(v1.address);
