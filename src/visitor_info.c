@@ -6,7 +6,9 @@
  * @author Soummyo Priyo Chattopadhyay - soummyopriyochattopa@cmail.carleton.ca
  * 
  */
-#include "include/visitor_info.h"
+
+#include "../include/visitor_info.h"
+#include "../include/add_visitor.h"
 #include<stdio.h>
 #include<stdlib.h>
 
@@ -21,12 +23,12 @@
 *
 * @param[in] Function has two input parameters.
 *
-* @return Function returns 0 on successful exection.. 
+* @return Function returns 0 on successful exection. 
 */
 
 int visitor_info(char *name,char *ph)
 {
-    add_visitor("general_rooms.csv",name,ph);
-    add_visitor("special_rooms.csv",name,ph);
+    add_visitor("../src/general_rooms.csv",name,ph);
+    add_visitor("../src/special_rooms.csv",name,ph);
     return 0;
 }
