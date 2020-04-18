@@ -1,5 +1,5 @@
 /**
- * @file Search_in_File.h
+ * @file search_in_File.h
  * 
  * @brief A function related to updating patient information.
  * 
@@ -35,4 +35,8 @@ search a patient by his name and phone number, display the patients information 
 _patient" and update "patient_record.csv" and "discharged_list.csv if the patient is discharged; or input
  doctor's advice, precatution and prescriptio if not discharged by invoking a separate function "Advice".*/
 
-int Search_in_File(char *fname, char *str, char*ph);
+#ifndef __search_in_File__
+#define __search_in_File__
+#endif // __search_in_File__
+int search_in_File(char *fname, char *str, char*ph);
+
