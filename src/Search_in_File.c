@@ -1,5 +1,5 @@
 /**
- * @file search_in_File.c
+ * @file search_in_file.c
  *
  * @brief Implmentation of updating patient info to a file.
  *
