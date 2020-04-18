@@ -9,10 +9,11 @@
 
 /**
  * @brief A function to count number of visitors from the file 
- * "visitor_info.csv"
+ * "visitor_info.csv". 
  * 
  * @details The function reads the "visitor_info.csv" file and counts
- * total number of visitors visited.
+ * total number of visitors visited. This function can read any file with any given name
+ * but will return an integer which will not be usefull.
  * 
  * @param[in] fname the name of the file form which the number of visitors will be counted.
  * 

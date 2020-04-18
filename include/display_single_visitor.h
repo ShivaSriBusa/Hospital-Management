@@ -19,8 +19,8 @@
  * @param[in] ph a character pointer that will contain the phone number of a patient for whom the visitor
  * information is to be displayed.
  * 
- * @return Return type is integer. It returns zero displaying appropriate message to the console window
- * and returns back to main.
+ * @return Return type is integer. It returns 0 if file is found and patient information is
+ * displayed. And returns -1 if file cannot be opened.
  */
 
 #ifndef __display_single_visitor__
