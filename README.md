@@ -1,2 +1,0 @@
-# Hospital-Management
-Project Program
