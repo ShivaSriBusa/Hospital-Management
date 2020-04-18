@@ -1,5 +1,4 @@
-struct visitor
-{
+struct visitor {
     char phoneNo[11];
     char *name,*address;
 }v1;
