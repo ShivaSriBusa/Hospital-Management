@@ -7,10 +7,10 @@
  * 
  */
 
-#include "include/rooms.h"
+#include "../include/rooms.h"
 #include<stdio.h>
 #include<stdlib.h>
-#include "include/id_generate.h"
+#include "../include/id_generate.h"
 
 /**
  * @brief A function to read the file "general_rooms.csv" and retun availability in general ward.
@@ -19,14 +19,15 @@
  * If available, returns flag value as signal to disease function. Disease function process this signal and stores
  * patient details in "general_rooms.csv" file. If it returns a flag for no availability, then appropriate message is displayed.
  * 
- * @return Returns 0 if no availability else returns new row number for patient to be added, if room is available.
+ * @return Returns 0 if no availability else returns 1, if room is available.
  */
+
 
 int general_rooms()
 {
-    int id=id_generate("special_rooms.csv");
+    int id=id_generate("../src/general_rooms.csv");
     FILE *fptr;
-    fptr = fopen("general_rooms.csv", "r");
+    fptr = fopen("../src/general_rooms.csv", "r");
     if (fptr == NULL)
     {
         printf("Error!");
@@ -42,7 +43,7 @@ int general_rooms()
     {
         printf("Patient can be Admitted in general ward");
         fclose(fptr);
-        return id;
+        return 1;
     }
 }
 
@@ -53,14 +54,14 @@ int general_rooms()
  * If available, returns flag value as signal to disease function. Disease function process this signal and stores
  * patient details in "special_rooms.csv" file. If it returns a flag for no availability, then appropriate message is displayed.
  * 
- * @return Returns 0 if no availability else returns new row number for patient to be added, if room is available.
+ * @return Returns 0 if no availability else returns 1 if room is available.
  */
 
 int special_rooms()
 {
-    int id=id_generate("special_rooms.csv");
+    int id=id_generate("../src/special_rooms.csv");
     FILE *fptr;
-    fptr = fopen("special_rooms.csv", "r");
+    fptr = fopen("../src/special_rooms.csv", "r");
     if (fptr == NULL)
     {
         printf("Error!");
@@ -76,6 +77,6 @@ int special_rooms()
     {
         printf("Patient can be Admitted in special ward");
         fclose(fptr);
-        return id;
+        return 1;
     }
 }

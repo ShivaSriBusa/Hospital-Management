@@ -13,6 +13,7 @@
 #include<stdlib.h>
 #include "../include/disease.h"
 #include "../include/rooms.h"
+#include "../include/id_generate.h"
 
 /** @details room capacity is only for 10 patients. Disease function process this signal retuned by rooms function and stores
  * patient details in "general_rooms.csv" file if symptoms are related to physical injury, If it returns a flag for 
@@ -21,7 +22,7 @@
  * 
  * @param[in] It takes patient symptoms separated by a demiliter ";" in the file along with patient name and patient phone number.
  * 
- * @return Returns 0 on successful execution. 
+ * @return Returns 0 on successful execution and -1 if file doesn't exist.
  * 
  */
 
@@ -49,7 +50,8 @@ int disease(char *symptom, char *patient_name,char*ph)
         ret = special_rooms();
         if (ret != 0)
         {
-            fptr = fopen("special_rooms.csv", "a");
+            fptr = fopen("../src/special_rooms.csv", "a");
+            ret = id_generate("../src/special_rooms.csv");
             fprintf(fptr,"%d,%s,%s,",ret,patient_name,ph);
             fprintf(fptr,"%s","\n");
             fclose(fptr);
@@ -60,7 +62,8 @@ int disease(char *symptom, char *patient_name,char*ph)
         ret = general_rooms();
         if (ret != 0)
         {
-            fptr = fopen("general_rooms.csv", "a");
+            fptr = fopen("../src/general_rooms.csv", "a");
+            ret = id_generate("../src/general_rooms.csv");
             fprintf(fptr,"%d,%s,%s,",ret,patient_name,ph);
             fprintf(fptr,"%s","\n");
             fclose(fptr);

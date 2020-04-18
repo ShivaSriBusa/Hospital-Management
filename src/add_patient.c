@@ -13,9 +13,9 @@
 #include<stdlib.h>
 #include "../include/id_generate.h"
 #include "../include/disease.h"
+#define memory_size 50
 
 /** @details Here the user will be able to input all the necessary information related to the patient. 
-
 * Following are the information that will be collected:
 * • Patient Name.
 * • Patient Address.
@@ -32,7 +32,7 @@
 *
 * After taking all the information, patient’s symptoms will be checked to identify if he has a chronic disease
 * or a physical injury. The hospital management will identify the symptom as chronic or physical and will pass the input accordingly.
-* Any patient information whether admitted or not  will be stored by the software in “patient_details.csv” file. 
+* Any patient information whether admitted or not  will be stored by the software in “patient_record.csv” file. 
 * After storing the patient information, Disease function is invoked to check the symptoms and allocate rooms if available. 
 *
 * @param[in] Function has no input parameters.
@@ -42,34 +42,25 @@
 
 void add_patient()
 {
-
-// Integer variable of size 50 for size of memory allocated to pointer variable
-    int s = 50; 
-
-// Integer variable id calls the id_generate function to generate row number for new record.
-    int id=id_generate("patient_record.csv"); 
-
-// Structure variables allocated memory.
-    p1.address = (char *)malloc(s);
-    p1.symp = (char *)malloc(s);
-    p1.doc_name = (char *)malloc(s);
-    p1.name = (char *)malloc(s);
-    p1.medication = (char *)malloc(s);
-    p1.allergies = (char *)malloc(s);
-    
-    // creating file pointer to work with files.
+    // Integer variable id calls the id_generate function to generate row number for new record.
+    int id=id_generate("../src/patient_record.csv");
+    // Structure variables allocated memory.
+    p1.address = (char *)malloc(memory_size);
+    p1.symp = (char *)malloc(memory_size);
+    p1.doc_name = (char *)malloc(memory_size);
+    p1.name = (char *)malloc(memory_size);
+    p1.medication = (char *)malloc(memory_size);
+    p1.allergies = (char *)malloc(memory_size);
+    // creating file pointer to work with files
     FILE *fptr;
-
-    // opening file in append mode.
-    fptr = fopen("patient_record.csv", "a");
-
-    // exiting program if file not found.
+    // opening file in writing mode
+    fptr = fopen("../src/patient_record.csv", "a");
+    // exiting program
     if (fptr == NULL)
     {
         printf("Error!");
         exit(1);
     }
-
     //Else details of patient collected and processed.
     else
     {
@@ -95,12 +86,8 @@ void add_patient()
         gets(p1.medication);
         printf("Please input patient allergies:");
         gets(p1.allergies);
-
         //fprintf is a function that is used to write records to the file. 
-        fprintf(fptr,"%d,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s\n",id,p1.name,p1.phoneNo,p1.address,p1.emergencyNo,p1.date_Adm,
-                p1.time_Adm,p1.symp,p1.doc_name,p1.patient_identity,p1.medication,p1.allergies,"No");
-        
-        //Calling disease function to check symptoms.
+        fprintf(fptr,"%d,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s\n",id,p1.name,p1.phoneNo,p1.address,p1.emergencyNo,p1.date_Adm,p1.time_Adm,p1.symp,p1.doc_name,p1.patient_identity,p1.medication,p1.allergies,"No");
         disease(p1.symp,p1.name,p1.phoneNo);
 
         //Freeing the allocated memory to pointer. It is must to free the memory after use.
@@ -111,7 +98,6 @@ void add_patient()
         free(p1.medication);
         free(p1.symp);
     }
-
     //Closing the file read is a good practice.
     fclose(fptr);
 }
