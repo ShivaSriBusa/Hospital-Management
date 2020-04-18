@@ -14,13 +14,23 @@
  * 
  */
 
+<<<<<<< HEAD
 #ifndef __advice__
 #define __advice__
 #endif // __advice__
 
 struct patient_advise
+=======
+
+
+struct patient_advice
+>>>>>>> 5342b606f0daa433dd5e559e4a7ddada0e686775
 {
    char *precaution, *diet_advise, *prescription;
 }a1;
 
 int advice(char *pname,char *ph);
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5342b606f0daa433dd5e559e4a7ddada0e686775

@@ -11,7 +11,11 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
+<<<<<<< HEAD
 #include "../include/display_advice.h"
+=======
+#include "include/display_advice.h"
+>>>>>>> 5342b606f0daa433dd5e559e4a7ddada0e686775
 
 /* 
  * @brief This function is to display patient advice details
@@ -30,7 +34,11 @@
 
 int display_advice(char *name,char *ph){
     //Open a .csv file in read mode
+<<<<<<< HEAD
     FILE *fp = fopen("../src/patient_advice.csv", "r");
+=======
+    FILE *fp = fopen("patient_advice.csv", "r");
+>>>>>>> 5342b606f0daa433dd5e559e4a7ddada0e686775
 
     //Display error message if file format is not .csv
     if (!fp) {

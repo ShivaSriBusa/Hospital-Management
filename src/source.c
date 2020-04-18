@@ -44,6 +44,7 @@
  * @return This function returns an integer 0 (Zero) upon successful execution.
  */
 
+<<<<<<< HEAD
 int main(int argc, char *argv[])
 {
     int opt;
@@ -69,6 +70,16 @@ int main(int argc, char *argv[])
                 int inp,s=100,id,c;
     welcomeMessage();
     system("clear");
+=======
+int main(){
+    int inp,s=100,id,c;
+    
+    // Calling welcome message
+    welcomeMessage();
+    system("clear");
+	
+    //Display the list of options for patient for hospital service
+>>>>>>> 5342b606f0daa433dd5e559e4a7ddada0e686775
     printf("\nPlease select one of the following:");
     printf("\n1. Add Patient Information");
     printf("\n2. Display all Patient Information");
@@ -77,6 +88,7 @@ int main(int argc, char *argv[])
     printf("\n5. Update admitted Patients Record");
     printf("\n6. Add Visitor Information");
     printf("\n7. Display Visitor Information");
+<<<<<<< HEAD
     printf("\n8. Test Details for Patient Symptoms");
     printf("\nInput choice: ");
     scanf("%d",&inp);
@@ -191,4 +203,112 @@ int main(int argc, char *argv[])
     return 0;
         }
     }
+=======
+    printf("\nInput choice: ");
+    scanf("%d", &inp);
+    fgetc(stdin);
+    
+    switch (inp){
+        //Choice 1 - 'Add Patient Information'
+	case 1:
+	    add_patient();
+	    break;
+        
+        //Choice 2 -  'Display all Patient Information'
+	case 2:
+	    readPatient();
+	    break;
+        
+	//Choice 3 - Display prescription, precaution and diet advise details by calling 'display_advice' function, passing patient name and patient phone number as parameters
+	case 3:
+	    id=id_generate("patient_advice.csv");
+	    p1.name = (char *)malloc(s);
+			
+            if(id > 1){
+		printf("\nPlease input patient name: ");
+		gets(p1.name);
+		printf("\nPlease input patient phone number: ");
+		gets(p1.phoneNo);
+		//disp(p1.name,p1.phoneNo);
+		display_advice(p1.name,p1.phoneNo);
+            }	
+	    else{
+		printf("\nNo record found");
+            }
+	    free(p1.name);
+            break;
+
+        //Choice 4 - Display information on Patient Admitted by passing patient name and phone number as parameters to the 'display_single_patient' function
+	case 4:
+            printf("\n1. Display a Patient Information");
+	    printf("\n2. Display total number of Patients Admitted");
+            printf("\nInput choice: ");
+	    scanf("%d", &inp);
+	    fgetc(stdin);
+	    if(inp == 1){
+		p1.name = (char *)malloc(s);
+		printf("\nPlease input patient name: ");
+		gets(p1.name);
+		printf("\nPlease input patient phone number: ");
+		gets(p1.phoneNo);
+		display_single_patient(p1.name,p1.phoneNo);
+		free(p1.name);
+            }
+	    else if(inp == 2){
+		c=count_admit();
+		printf("\nTotal number of admitted patients = %d",c-2);
+	    }
+	    break;
+
+        //Choice 5 - Update admitted Patients Record by passing patient name and patient phone number as parameters to the 'Search_in_File' function
+	case 5:
+	    p1.name = (char *)malloc(s);
+	    printf("\nPlease input patient name: ");
+	    gets(p1.name);
+            printf("\nPlease input patient phone number: ");
+	    gets(p1.phoneNo);
+	    Search_in_File("patient_record.csv",p1.name,p1.phoneNo);
+	    free(p1.name);
+	    break;
+		
+        //Choice 6 - Add Visitor Information by passing patient name and patient phone number to the 'visitor_info' function
+        case 6:
+            p1.name = (char *)malloc(s);
+	    printf("\nPlease input patient name: ");
+	    gets(p1.name);
+	    printf("\nPlease input patient phone number: ");
+	    gets(p1.phoneNo);
+	    visitor_info(p1.name,p1.phoneNo);
+	    free(p1.name);
+	    break;
+
+        //Choice - 7 - Display Visitor Information by passing patient name and patient phone number as parameters to the 'display_single_visitor' function
+	case 7:
+	    printf("\n1. Display a visitor Information");
+	    printf("\n2. Display total number of visitors");
+	    printf("\nInput choice: ");
+	    scanf("%d", &inp);
+	    fgetc(stdin);
+	    if(inp == 1){
+	        p1.name = (char *)malloc(s);
+	        printf("\nPlease input patient name: ");
+	        gets(p1.name);
+                printf("\nPlease input patient phone number: ");
+		gets(p1.phoneNo);
+		display_single_visitor(p1.name,p1.phoneNo);
+		free(p1.name);
+            }
+	    else if(inp == 2){
+		c=count_visitor();
+		printf("\nTotal number of visitors = %d",c-2);
+            }
+	    break;
+		
+        //default choice for other options/selections except mentioned above choices
+        default:
+	    printf("Invalid choice");
+	    break;
+    }
+    return 0;
+>>>>>>> 5342b606f0daa433dd5e559e4a7ddada0e686775
 }

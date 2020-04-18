@@ -19,7 +19,13 @@
  * @return Return value is int.
  */
 
+<<<<<<< HEAD
 #ifndef __display_advice__
 #define __display_advice__
 #endif // __display_advice__
+=======
+
+
+
+>>>>>>> 5342b606f0daa433dd5e559e4a7ddada0e686775
 int display_advice(char *name,char *ph);
