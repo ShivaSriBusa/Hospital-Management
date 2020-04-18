@@ -1,10 +1,7 @@
 # ------------------------------------------------
 # Generic Makefile
 #
-# @author sreeram sankarasubram - sreeramsankarasubram@cmail.carleton.ca
-# @author Kazi Muhammad Jameel - KaziMuhammadJameel@cmail.carleton.ca
-# @author Shiva Sri Busa - ShivaSriBusa@cmail.carleton.ca
-# @author Soummyo Priyo Chattopadhyay - SoummyoPriyoChattopa@cmail.carleton.ca
+# Author: sreeramsankarasubram@cmail.carleton.ca.com
 # Date  : 2019-11-10
 #
 # Changelog :
@@ -48,6 +45,11 @@ $(OBJECTS1): $(OBJDIR)/%.o : $(SRCDIR)/%.c
 $(OBJECTS2): $(OBJDIR)/%.o : $(SRCTESTDIR)/%.c
 	@$(CC) $(CFLAGS) $(INC) -c $< -o $@
 	@echo "Compiled "$<" successfully!"
+
+#This command generates the doxygen files
+doxygen:
+	rm -f -r ./doc/detailed
+	doxygen ./doc/doxygen_config.cfg
 
 .PHONY: clean
 clean:
