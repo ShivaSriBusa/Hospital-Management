@@ -22,4 +22,8 @@
  * 
  */
 
+#ifndef __count_visitor__
+#define __count_visitor__
+#endif // __count_visitor__
+
 int count_visitor(char *fname);

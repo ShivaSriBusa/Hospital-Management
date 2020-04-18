@@ -23,4 +23,8 @@
  * and returns back to main.
  */
 
+#ifndef __display_single_visitor__
+#define __display_single_visitor__
+#endif // __display_single_visitor__
+
 int display_single_visitor(char *name, char *ph);
