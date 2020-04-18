@@ -46,9 +46,9 @@
 
 <<<<<<< HEAD
 int main(int argc, char *argv[])
-{
+{s
     int opt;
-    while ((opt = getopt(argc, argv, "h:a:t")) != -1)
+    while ((opt = getopt(argc, argv, "hat")) != -1)
     {
         switch(opt)
         {
