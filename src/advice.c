@@ -8,7 +8,7 @@
  */
 
 
-#include "include/Advice.h"
+#include "../include/advice.h"
 #include<stdlib.h>
 #include<stdio.h>
 #include<string.h>
@@ -27,7 +27,7 @@ int advice(char *pname,char *ph){
     FILE *fptr;
 
     //Integer variable id calls the id_generate function to generate row number.
-    id = id_generate("patient_advice.csv");
+    id = id_generate("../src/patient_advice.csv");
 
     // Structure variables allocated memory.
     a1.diet_advise = (char *)malloc(SIZE);
@@ -35,7 +35,7 @@ int advice(char *pname,char *ph){
     a1.prescription = (char *)malloc(SIZE);
        
     // Opening file in append mode.
-    fptr = fopen("patient_advice.csv", "a");
+    fptr = fopen("../src/patient_advice.csv", "a");
 
     //Exiting program if file is not found.
     if (fptr == NULL){
