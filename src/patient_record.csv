@@ -1,3 +1,3 @@
-ID,Patient name,Phone,Address,Emergency phone,Date of admission,Time of admission,Symptoms,Doctors name,Identity number,Medication,Allergies,Discharge status
-1,ram,1234,aa,aa,aa,aa,fracture,aa,aa,aa,aa,Yes
-2,ravi,1111,bb,bb,bb,bb,fever,bb,bb,bb,bb,No
+ID,Name,Phone Number,Address,Emergency Phone Number,Date of admission (DD-MM-YYYY),Time of admission (HH:MM),Symptoms,Doctors name,Identity Number,Medications,Allergies,Discharge status
+1,sreeram s,3439874146,1551 lycee,9445664141,15-04-2020,09:40,fever,gopal,101153989,none,none,No
+2,ravi s,9445663534,1591 lycee,3439874145,15-05-2020,10:30,fever,ajith,101153998,none,none,No
