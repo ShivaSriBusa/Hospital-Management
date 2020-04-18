@@ -6,10 +6,11 @@
  * @author Soummyo Priyo Chattopadhyay - soummyopriyochattopa@cmail.carleton.ca
  * 
  */
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
-#include "include/count_admit.h"
+#include "../include/count_admit.h"
 
 /**
 *
@@ -22,34 +23,27 @@
 *	and returns -1 if the file cannot be opened.
 */
 
-
-
-int count_admit()
-{
+int count_admit()   {
     char buff[1024];
     int i = 0, j = 0,count=0;;
     FILE *fptr1, *fptr2;
-    fptr1 = fopen("general_rooms.csv", "r");
-    fptr2 = fopen("special_rooms.csv", "r");
-    if (fptr1 == NULL)
-    {
+    fptr1 = fopen("../src/general_rooms.csv", "r");
+    fptr2 = fopen("../src/special_rooms.csv", "r");
+    if (fptr1 == NULL)  {
         printf("\n file opening failed ");
         return -1;
     }
-    if (fptr2 == NULL)
-    {
+    if (fptr2 == NULL)  {
         printf("\n file opening failed ");
         return -1;
     }
-    do
-	{
-	 fgets(buff, 1024, (FILE*)fptr1);
-	 i++;
+    do  {
+	    fgets(buff, 1024, (FILE*)fptr1);
+	    i++;
 	}while((getc(fptr1))!=EOF);
-    do
-	{
-	 fgets(buff, 1024, (FILE*)fptr2);
-	 j++;
+    do  {
+	    fgets(buff, 1024, (FILE*)fptr2);
+	    j++;
 	}while((getc(fptr2))!=EOF);
     fclose(fptr2);
     fclose(fptr1);
