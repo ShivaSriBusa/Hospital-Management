@@ -7,8 +7,9 @@
  * 
  */
 
-#define size 10
-
+#ifndef size
+#define size 11
+#endif
 
 /**
  * @brief A Structure containing necessary variables to store the details of patients.
@@ -18,23 +19,18 @@
  * 
  */
 
-struct patient 
+struct patient
 {
-    //For storing phone number
+    // For storing phone number
     char phoneNo[size], emergencyNo[size];
-
     // For storing date and time of admission and release of patients
-    char date_Adm[20], time_Adm[20], date_release[20],time_release[20]; 
-
-    //For storing unique patient_identity number (manual input - not auto generated)
-    char  patient_identity[100];
-
-    //For storing regular Patient details (patient name, address, symptoms, medication, allergies and discharge status)
+    char date_Adm[size], time_Adm[size], date_release[size],time_release[size];
+    // For storing unique patient_identity number (manual input - not auto generated)
+    char patient_identity[size];
+    // For storing regular Patient details (patient name, address, symptoms, medication, allergies and discharge status)
     char *name, *address, *symp, *medication, *allergies,*status;
-
-    //For storing doctors name
+    // For storing doctors name
     char *doc_name;
-
 }p1;
 
 /**

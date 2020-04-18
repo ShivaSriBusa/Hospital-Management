@@ -14,7 +14,7 @@
  * If available, returns flag value as signal to disease function. Disease function process this signal and stores
  * patient details in "general_rooms.csv" file. If it returns a flag for no availability, then appropriate message is displayed.
  * 
- * @return Returns 0 if no availability else returns new row number for patient to be added, if room is available.
+ * @return Returns 0 if no availability else returns 1, if room is available.
  */
 
 int general_rooms();
@@ -26,7 +26,7 @@ int general_rooms();
  * If available, returns flag value as signal to disease function. Disease function process this signal and stores
  * patient details in "special_rooms.csv" file. If it returns a flag for no availability, then appropriate message is displayed.
  * 
- * @return Returns 0 if no availability else returns new row number for patient to be added, if room is available.
+ * @return Returns 0 if no availability else returns 1, if room is available.
  */
 
 int special_rooms();

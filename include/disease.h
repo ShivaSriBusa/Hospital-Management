@@ -20,5 +20,4 @@
  * 
  * @return Returns 0 on successful execution.
  */
-
 int disease(char *symptom, char *patient_name,char*ph);
