@@ -11,10 +11,10 @@
 #include <stdlib.h>
 #include <string.h>
 #include "include/add_patient.h"
-#include "include/welcomeMessage.h"
+#include "include/welcome_message.h"
 #include "include/visitor_info.h"
 #include "include/add_visitor.h"
-#include "include/Advice.h"
+#include "include/advice.h"
 #include "include/count_admit.h"
 #include "include/count_visitor.h"
 #include "include/disease.h"
@@ -24,7 +24,7 @@
 #include "include/id_generate.h"
 #include "include/read_patient.h"
 #include "include/rooms.h"
-#include "include/Search_in_File.h"
+#include "include/search_in_file.h"
 #define size 10
 
 
