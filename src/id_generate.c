@@ -23,23 +23,25 @@
  * @return Returns integer(new row number) on successful execution and -1 if file doesm't exist.
  */
 
-int id_generate(char *file)
-{
-    // Act as FILE pointer. used for opening a file 
-    FILE *fp = fopen(file,"r");
-    // A flag used for counting number of rows existing in file
-    int count=0;
-    // Used for storing line read from file. 
-    char buff[1024];
-     if (!fp)
-    {
-	   printf("Can't open file\n");
-	   return -1;
-    }
-    // Reads line by line from file pointed by fp
-	while(fgets(buff,1024, fp)!= NULL)
-	{
-	 count++;
+int id_generate(char *file){
+
+	// Act as FILE pointer. used for opening a file 
+    	FILE *fp = fopen(file,"r");
+    	
+	// A flag used for counting number of rows existing in file
+    	int count = 0;
+    	
+	// Used for storing line read from file. 
+    	char buff[1024];
+     
+	if(!fp){
+		printf("Can't open file\n");
+	   	return -1;
+    	}
+    
+	// Reads line by line from file pointed by fp
+	while(fgets(buff,1024, fp) != NULL){
+		count++;
 	}
-    return count;
+    	return count;
 }
