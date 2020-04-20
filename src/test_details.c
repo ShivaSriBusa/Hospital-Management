@@ -1,3 +1,13 @@
+/*
+ * @file test_details.c
+ *
+ * @brief This function has all the test details 
+ *
+ * @author Shiva Sri Busa - shivasribusa@cmail.carleton.ca
+ *
+ */
+
+
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
@@ -5,15 +15,20 @@
 #include "../include/id_generate.h"
 
 int display_test(char *name, char  *ph){
+        //Variable intialisation
 	int id,field_count = 0,row_count = 0,t_ph,ch,u_ph;
 	char string[1024],inp[10];
 	FILE *fptr1,*fptr2;
 	int n = 0,m = 0;
 	
+	//open file in read mode
 	fptr1 = fopen("../src/patient_record.csv","r");
+
+	//open file in append mode
 	fptr2 = fopen("../src/test_details.csv","a");
 	id = id_generate("../src/test_details.csv");
-    
+        
+        //display message if no file found
 	if (fptr1 == NULL){
         	printf("\n file opening failed ");
         	return -1;
@@ -89,9 +104,13 @@ int display_test(char *name, char  *ph){
                 	}
         	}
 	}
+	
+	//display if no record found
         if(n == 0){
 		printf("\nNo record found!");
 	}
+
+	//displays if phone number doesn't match as per the record
 	if(m == 0 && n != 0){
 		printf("\nPhone number did not match!");
 	}
