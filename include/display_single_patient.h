@@ -1,7 +1,7 @@
 /**
  * @file dispaly_single_patient.h
  *
- * @brief Implementation of display a particular patient who is admitted to the hospital.
+ * @brief Implementation of displaying a particular patient who is admitted to the hospital.
  *
  * @author Soummyo Priyo Chattopadhyay - soummyopriyochattopa@cmail.carleton.ca
  * 
