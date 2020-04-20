@@ -1,3 +1,19 @@
-1)PASS: Input: Invalid file, Expected Output: -1, Output: -1 .
-2)PASS: Input: Empty file, Expected Output: 0, Output: 0 .
-3)PASS: Input: valid file, Expected Output: 2, Output: 2 .
+1)PASS: Input: valid File, Expected Output: 3, Output: 3 .
+1)PASS: Input: Valid File, Expected Output: 0, Output: 0 .
+1)PASS: Input: Valid File, Expected Output: 1, Output: 1 .
+1)PASS: Input: Valid File, Expected Output: 2, Output: 2 .
+1)PASS: Input: Invalid File wrong filename, Expected Output: -1, Output: -1 .
+1)PASS: Input: Invalid File wrong path, Expected Output: -1, Output: -1 .
+1)PASS: Input: Invalid wrong extension File, Expected Output: -1, Output: -1 .
+1)PASS: Input: Valid File, Expected Output: 0, Output: 0 .
+1)PASS: Input: Valid File, Expected Output: 0, Output: 0 .
+1)PASS: Input: Valid File, Expected Output: 0, Output: 0 .
+1)PASS: Input: Valid File, Expected Output: 1, Output: 1 .
+1)PASS: Input: Invalid File, Expected Output: -1, Output: -1 .
+1)PASS: Input: Empty File, Expected Output: 0, Output: 0 .
+1)PASS: Input: Valid File, Expected Output: 0, Output: 0 .
+1)PASS: Input: Valid Inputs, Expected Output: -1, Output: -1 .
+1)PASS: Input: Invalid name, Expected Output: -1, Output: -1 .
+1)PASS: Input: Invalid number, Expected Output: -1, Output: -1 .
+1)PASS: Input: Valid File, Expected Output: 0, Output: 0 .
+1)PASS: Input: Valid File, Expected Output: 0, Output: 0 .
