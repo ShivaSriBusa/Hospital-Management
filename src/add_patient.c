@@ -41,76 +41,80 @@
 */
 
 void add_patient(){
-	// Integer variable id calls the id_generate function to generate row number for new record.
-    	int id=id_generate("../src/patient_record.csv");
-    
-	// Structure variables allocated memory.
+
+	/* Integer variable id calls the id_generate function to generate row number for new record. */
+
+    int id=id_generate("../src/patient_record.csv");
+
+	/* Structure variables allocated memory. */
+
 	p1.address = (char *)malloc(memory_size);
-    	p1.symp = (char *)malloc(memory_size);
-    	p1.doc_name = (char *)malloc(memory_size);
-    	p1.name = (char *)malloc(memory_size);
-    	p1.medication = (char *)malloc(memory_size);
-    	p1.allergies = (char *)malloc(memory_size);
-    
-    	// creating file pointer to work with files
-    	FILE *fptr;
-    
-    	// opening file in writing mode
-    	fptr = fopen("../src/patient_record.csv", "a");
-    
-    	// exiting program
-    	if (fptr == NULL){
-        	printf("Error!");
-        	exit(1);
-    	}    	
-    	else{
-		//Else details of patient collected and processed.
-        	printf("Please input patient name:");
-        	gets(p1.name);
-        	
+   	p1.symp = (char *)malloc(memory_size);
+   	p1.doc_name = (char *)malloc(memory_size);
+   	p1.name = (char *)malloc(memory_size);
+   	p1.medication = (char *)malloc(memory_size);
+   	p1.allergies = (char *)malloc(memory_size);
+
+    /* creating file pointer to work with files */
+
+    FILE *fptr;
+
+    /* opening file in append mode */
+
+    fptr = fopen("../src/patient_record.csv", "a");
+
+    /* exiting program */
+
+    if (fptr == NULL){
+        printf("Error!");
+        exit(1);
+    }
+    else{
+
+		/* Else details of patient collected and processed. */
+
+        printf("Please input patient name:");
+        gets(p1.name);
 		printf("Please input patient address:");
-        	gets(p1.address);
-        	
+        gets(p1.address);
 		printf("Please input patient contact number (0-9):");
-        	gets(p1.phone_no);
-        
+        gets(p1.phone_no);
 		printf("Please input patient emergency contact number:");
-        	gets(p1.emergency_no);
-        
+        gets(p1.emergency_no);
 		printf("Please input patient date of admission (DD-MM-YYYY):");
-        	gets(p1.date_adm);
-        	
+        gets(p1.date_adm);
 		printf("Please input patient time of admission (HH:MM) :");
-        	gets(p1.time_adm);
-        
-		printf("Please input patient symptoms:");
-        	gets(p1.symp);
-        
-		printf("Please input doctors attending :");
-        	gets(p1.doc_name);
-        
-		printf("Please input Patient identity number :");
-        	gets(p1.patient_identity);
-        	
-		printf("Please input patient medications:");
-        	gets(p1.medication);
-        	
-		printf("Please input patient allergies:");
-        	gets(p1.allergies);
-        
-        	//fprintf is a function that is used to write records to the file.
-       		fprintf(fptr,"%d,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s\n",id,p1.name,p1.phone_no,p1.address,p1.emergency_no,p1.date_adm,p1.time_adm,p1.symp,p1.doc_name,p1.patient_identity,p1.medication,p1.allergies,"No");
-        	disease(p1.symp,p1.name,p1.phone_no);
-        
-       	 	//Freeing the allocated memory to pointer. It is must to free the memory after use.
-        	free(p1.address);
-        	free(p1.allergies);
-        	free(p1.name);
-        	free(p1.doc_name);
-        	free(p1.medication);
-        	free(p1.symp);
+        gets(p1.time_adm);
+    	printf("Please input patient symptoms:");
+        gets(p1.symp);
+        printf("Please input doctors attending :");
+        gets(p1.doc_name);
+        printf("Please input Patient identity number :");
+        gets(p1.patient_identity);
+        printf("Please input patient medications:");
+        gets(p1.medication);
+        printf("Please input patient allergies:");
+        gets(p1.allergies);
+
+        /* fprintf is a function that is used to write records to the file. */
+
+       	fprintf(fptr,"%d,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s\n",id,p1.name,p1.phone_no,p1.address,p1.emergency_no,p1.date_adm,p1.time_adm,p1.symp,p1.doc_name,p1.patient_identity,p1.medication,p1.allergies,"No");
+
+        /* Calling disease function to check symptoms and allocate room based on needs. */
+
+        disease(p1.symp,p1.name,p1.phone_no);
+
+       	/* Freeing the allocated memory to pointer. It is must to free the memory after use. */
+
+        free(p1.address);
+        free(p1.allergies);
+        free(p1.name);
+        free(p1.doc_name);
+        free(p1.medication);
+        free(p1.symp);
 	}
-    
-   	//Closing the file read is a good practice.
-    	fclose(fptr);
+
+   	/* Closing the file read is a good practice. */
+
+    fclose(fptr);
 }
