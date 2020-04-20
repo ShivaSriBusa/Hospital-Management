@@ -28,48 +28,62 @@
 
 int disease(char *symptom, char *patient_name,char *ph){
 	int ret, flag = 1;
-    	FILE *fptr;
-    	char *token;
-    	int opt;
-    	token = strtok(symptom, ";");
-    
-    	while (token != NULL){
-        	printf("\nPatients symptoms: %s",token);
-        	flag++;
-        	token = strtok(NULL, ";");
-    	}
-    
+    FILE *fptr;
+    char *token;
+    int opt;
+
+    /* Extracting multiple symptoms separated by ';' */
+
+    token = strtok(symptom, ";");
+
+    /* Displaying the symptoms */
+
+    while (token != NULL){
+        printf("\nPatients symptoms: %s",token);
+        flag++;
+        token = strtok(NULL, ";");
+    }
+
+    /* Asking input from Hospital Management to classify the disease as chronic or physical injury */
+
 	printf("\n\nPlease input one of the following options:");
-    	printf("\n1. Chronic symptoms");
-    	printf("\n2. Physical injury symptoms");
-    	printf("\n3. Neither chronic nor physical injury");
-    	printf("\nInput choice: ");
-    	scanf("%d",&opt);
-    
-    	if (opt == 1){
-        	ret = special_rooms();
-        	
-		if (ret != 0){
-            		fptr = fopen("../src/special_rooms.csv", "a");
-            		ret = id_generate("../src/special_rooms.csv");
-            		fprintf(fptr,"%d,%s,%s,",ret,patient_name,ph);
-            		fprintf(fptr,"%s","\n");
-            		fclose(fptr);
-        	}
-    	}
-    	else if (opt == 2){
-        	ret = general_rooms();
-        	
-		if (ret != 0){
-            		fptr = fopen("../src/general_rooms.csv", "a");
-            		ret = id_generate("../src/general_rooms.csv");
-            		fprintf(fptr,"%d,%s,%s,",ret,patient_name,ph);
-            		fprintf(fptr,"%s","\n");
-            		fclose(fptr);
-        	}
-    	}
-    	else if(opt == 3){
-        	printf("No admission Required");
-    	}
+    printf("\n1. Chronic symptoms");
+    printf("\n2. Physical injury symptoms");
+    printf("\n3. Neither chronic nor physical injury");
+    printf("\nInput choice: ");
+    scanf("%d",&opt);
+
+    /* Checking room availability and allocating special ward if needed */
+
+    if (opt == 1){
+        ret = special_rooms();
+    	if (ret != 0){
+            	fptr = fopen("../src/special_rooms.csv", "a");
+            	ret = id_generate("../src/special_rooms.csv");
+            	fprintf(fptr,"%d,%s,%s,",ret,patient_name,ph);
+            	fprintf(fptr,"%s","\n");
+            	fclose(fptr);
+        }
+    }
+
+    /* Checking room availability and allocating general ward if needed */
+
+    else if (opt == 2){
+        ret = general_rooms();
+        if (ret != 0){
+            fptr = fopen("../src/general_rooms.csv", "a");
+            ret = id_generate("../src/general_rooms.csv");
+            fprintf(fptr,"%d,%s,%s,",ret,patient_name,ph);
+            fprintf(fptr,"%s","\n");
+            fclose(fptr);
+        }
+    }
+
+    /* If it is neither chronic or physical injury - no admission needed. */
+
+    else if(opt == 3){
+        printf("No admission Required");
+    }
+
    	return 0;
 }
