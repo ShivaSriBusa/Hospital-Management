@@ -48,9 +48,9 @@
 
 int main(int argc, char *argv[]){
 	int opt;
-    
+
 	while ((opt = getopt(argc, argv, "hat")) != -1){
-        	
+
 		switch(opt){
             		case 'h':
                 		printf("-t Runs automated unit testing and exits\n");
@@ -68,10 +68,10 @@ int main(int argc, char *argv[]){
                 		/* Run main Hospital Management program */
                 		printf("Running Hospital Management Program\n");
                 		int inp,s=100,id,c;
-    			
+
 			welcome_message();
     			system("clear");
-    			
+
 			printf("\nPlease select one of the following:");
     			printf("\n1. Add Patient Information");
     			printf("\n2. Display all Patient Information");
@@ -83,9 +83,9 @@ int main(int argc, char *argv[]){
     			printf("\n8. Test Details for Patient Symptoms");
     			printf("\nInput choice: ");
     			scanf("%d",&inp);
-    			
+
 			fgetc(stdin);
-    			
+
 			switch(inp){
     				case 1:
         				add_patient();
@@ -99,40 +99,40 @@ int main(int argc, char *argv[]){
 					id = id_generate("../src/patient_advice.csv");
         				p1.name = (char *)malloc(s);
         				int number;
-        				
+
 					if(id > 1){
             					printf("\nPlease input patient name: ");
             					gets(p1.name);
-                                                
+
 						if(strlen(p1.name) >= 50){
-                                                        printf("\nName should not be more than 50 characters");	
-							while(strlen(p1.name) >= 50){               						
+                                                        printf("\nName should not be more than 50 characters");
+							while(strlen(p1.name) >= 50){
         							printf("\nPlease input patient name: ");
-            							gets(p1.name);	
-							        continue;				                
-        						}							
+            							gets(p1.name);
+							        continue;
+        						}
 						}
 						printf("\nPlease input patient phone number: ");
             					scanf("%d",&number);
 
 						char str[15];
 						int len;
-						len = sprintf(str, "%d", number);                                               
-						
+						len = sprintf(str, "%d", number);
+
 						if(len != 10){
-							printf("\nPhone number should be 10 digits"); 							
-							
-							while(len != 10){               						
+							printf("\nPhone number should be 10 digits");
+
+							while(len != 10){
         							printf("\nPlease input patient phone number: ");
-            							scanf("%d",&number);	
+            							scanf("%d",&number);
 							        len = sprintf(str, "%d", number);
 								if(len != 10){
 									printf("\nPhone number should be 10 digits");
-								}								
-            							continue;				                
+								}
+            							continue;
         						}
 						}
-            					display_advice(p1.name,number);	
+            					display_advice(p1.name,number);
         				}
         				else{
             					printf("\nNo record found ");
@@ -146,22 +146,25 @@ int main(int argc, char *argv[]){
        					printf("\n2. Display total number of Patients Admitted");
         				printf("\nInput choice: ");
         				scanf("%d", &inp);
-        				
+
 					fgetc(stdin);
-        				
+
 					if(inp == 1){
             					p1.name = (char *)malloc(s);
             					printf("\nPlease input patient name: ");
             					gets(p1.name);
-            
+
 						printf("\nPlease input patient phone number: ");
             					gets(p1.phone_no);
-            					
+
 						display_single_patient(p1.name,p1.phone_no);
             					free(p1.name);
         				}
         				else if(inp == 2){
-            					c = count_admit();
+								char *fptr1, *fptr2;
+								fptr1 = "../src/general_rooms.csv";
+    							fptr2 = "../src/special_rooms.csv";
+            					c = count_admit(fptr1,fptr2);
             					printf("\nTotal number of admitted patients = %d",c-2);
         				}
         				break;
@@ -195,7 +198,7 @@ int main(int argc, char *argv[]){
         				printf("\n2. Display total number of visitors");
         				printf("\nInput choice: ");
         				scanf("%d", &inp);
-        				
+
 					fgetc(stdin);
         				if(inp == 1){
             					p1.name = (char *)malloc(s);
@@ -203,7 +206,7 @@ int main(int argc, char *argv[]){
             					gets(p1.name);
 
             					printf("\nPlease input patient phone number: ");
-           					gets(p1.phone_no);
+           						gets(p1.phone_no);
             					display_single_visitor(p1.name,p1.phone_no);
             					free(p1.name);
         				}
@@ -212,18 +215,18 @@ int main(int argc, char *argv[]){
             					printf("\nTotal number of visitors = %d",c-1);
         				}
         				break;
-    				
+
 				case 8:
         				p1.name = (char *)malloc(s);
         				printf("\nPlease input patient name: ");
         				gets(p1.name);
-        				
+
 					printf("\nPlease input patient phone number: ");
         				gets(p1.phone_no);
         				display_test(p1.name,p1.phone_no);
         				free(p1.name);
         				break;
-    				
+
 				default:
         				printf("Invalid choice");
         				break;
