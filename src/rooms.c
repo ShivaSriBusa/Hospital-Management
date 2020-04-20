@@ -23,28 +23,27 @@
  */
 
 
-int general_rooms()
-{
-    int id=id_generate("../src/general_rooms.csv");
-    FILE *fptr;
-    fptr = fopen("../src/general_rooms.csv", "r");
-    if (fptr == NULL)
-    {
-        printf("Error!");
-        exit(1);
-    }
-    if (id > 10)
-    {
-        printf("No Rooms available in general ward");
-        fclose(fptr);
-        return 0;
-    }
-    else
-    {
-        printf("Patient can be Admitted in general ward");
-        fclose(fptr);
-        return 1;
-    }
+int general_rooms(){
+
+	int id=id_generate("../src/general_rooms.csv");
+    	FILE *fptr;
+    	fptr = fopen("../src/general_rooms.csv", "r");
+   
+	if(fptr == NULL){
+        	printf("Error!");
+        	exit(1);
+    	}
+    
+	if(id > 10){
+        	printf("No Rooms available in general ward");
+        	fclose(fptr);
+        	return 0;
+    	}
+    	else{
+        	printf("Patient can be Admitted in general ward");
+        	fclose(fptr);
+        	return 1;
+    	}
 }
 
 /**
@@ -57,26 +56,25 @@ int general_rooms()
  * @return Returns 0 if no availability else returns 1 if room is available.
  */
 
-int special_rooms()
-{
-    int id=id_generate("../src/special_rooms.csv");
-    FILE *fptr;
-    fptr = fopen("../src/special_rooms.csv", "r");
-    if (fptr == NULL)
-    {
-        printf("Error!");
-        exit(1);
-    }
-    if (id > 10)
-    {
-        printf("No Rooms available in special ward");
-        fclose(fptr);
-        return 0;
-    }
-    else
-    {
-        printf("Patient can be Admitted in special ward");
-        fclose(fptr);
-        return 1;
-    }
+int special_rooms(){
+	
+	int id=id_generate("../src/special_rooms.csv");
+    	FILE *fptr;
+    	fptr = fopen("../src/special_rooms.csv", "r");
+    
+	if (fptr == NULL){
+        	printf("Error!");
+        	exit(1);
+    	}
+    
+	if(id > 10){
+        	printf("No Rooms available in special ward");
+        	fclose(fptr);
+        	return 0;
+    	}
+    	else{
+        	printf("Patient can be Admitted in special ward");
+        	fclose(fptr);
+        	return 1;
+    	}
 }
