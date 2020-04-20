@@ -11,7 +11,7 @@
 #include<stdlib.h>
 #include "../include/welcome_message.h"
 
-/*
+/*       
  * @brief A function to display welcome message for Hospital management system.
  *
  * @details This function execute and it will display welcome message for Hospital management system.
