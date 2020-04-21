@@ -72,11 +72,11 @@ int main(int argc, char *argv[]){
 			welcome_message();
     			system("clear");
 
-			printf("\nPlease select one of the following:");
+				printf("\nPlease select one of the following:");
     			printf("\n1. Add Patient Information");
     			printf("\n2. Display all Patient Information");
     			printf("\n3. Display prescription, precaution and diet advise");
-   			printf("\n4. Display information on Patient Admitted");
+   				printf("\n4. Display information on Patient Admitted");
     			printf("\n5. Update admitted Patients Record");
     			printf("\n6. Add Visitor Information");
     			printf("\n7. Display Visitor Information");
