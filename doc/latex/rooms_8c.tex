@@ -1,0 +1,61 @@
+\hypertarget{rooms_8c}{}\doxysection{rooms.\+c File Reference}
+\label{rooms_8c}\index{rooms.c@{rooms.c}}
+
+
+A collection of functions related to the checking availability of rooms for admitted patients.  
+
+
+{\ttfamily \#include \char`\"{}../include/rooms.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../include/id\+\_\+generate.\+h\char`\"{}}\newline
+Include dependency graph for rooms.\+c\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{rooms_8c_a6a4b39ea87d4c54d67976476c6b0679a}{general\+\_\+rooms}} ()
+\begin{DoxyCompactList}\small\item\em A function to read the file \char`\"{}general\+\_\+rooms.\+csv\char`\"{} and retun availability in general ward. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{rooms_8c_a561813102158d7e4350807f11c4e81c1}{special\+\_\+rooms}} ()
+\begin{DoxyCompactList}\small\item\em A function to read the file \char`\"{}special\+\_\+rooms.\+csv\char`\"{} and return availability in special ward. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A collection of functions related to the checking availability of rooms for admitted patients. 
+
+\begin{DoxyAuthor}{Author}
+sreeram sankarasubramanian -\/ \href{mailto:sreeramsankarasubram@cmail.carleton.ca}{\texttt{ sreeramsankarasubram@cmail.\+carleton.\+ca}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{rooms_8c_a6a4b39ea87d4c54d67976476c6b0679a}\label{rooms_8c_a6a4b39ea87d4c54d67976476c6b0679a}} 
+\index{rooms.c@{rooms.c}!general\_rooms@{general\_rooms}}
+\index{general\_rooms@{general\_rooms}!rooms.c@{rooms.c}}
+\doxysubsubsection{\texorpdfstring{general\_rooms()}{general\_rooms()}}
+{\footnotesize\ttfamily int general\+\_\+rooms (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+A function to read the file \char`\"{}general\+\_\+rooms.\+csv\char`\"{} and retun availability in general ward. 
+
+room capacity is only for 10 patients. Checks if space is available in \char`\"{}general\+\_\+rooms.\+csv\char`\"{}. If available, returns flag value as signal to disease function. Disease function process this signal and stores patient details in \char`\"{}general\+\_\+rooms.\+csv\char`\"{} file. If it returns a flag for no availability, then appropriate message is displayed.
+
+\begin{DoxyReturn}{Returns}
+Returns 0 if no availability else returns 1, if room is available. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rooms_8c_a561813102158d7e4350807f11c4e81c1}\label{rooms_8c_a561813102158d7e4350807f11c4e81c1}} 
+\index{rooms.c@{rooms.c}!special\_rooms@{special\_rooms}}
+\index{special\_rooms@{special\_rooms}!rooms.c@{rooms.c}}
+\doxysubsubsection{\texorpdfstring{special\_rooms()}{special\_rooms()}}
+{\footnotesize\ttfamily int special\+\_\+rooms (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+A function to read the file \char`\"{}special\+\_\+rooms.\+csv\char`\"{} and return availability in special ward. 
+
+room capacity is only for 10 patients. Checks if space is available in \char`\"{}special\+\_\+rooms.\+csv\char`\"{}. If available, returns flag value as signal to disease function. Disease function process this signal and stores patient details in \char`\"{}special\+\_\+rooms.\+csv\char`\"{} file. If it returns a flag for no availability, then appropriate message is displayed.
+
+\begin{DoxyReturn}{Returns}
+Returns 0 if no availability else returns 1 if room is available. 
+\end{DoxyReturn}

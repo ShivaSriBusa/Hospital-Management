@@ -1,0 +1,47 @@
+\hypertarget{search__in__file_8c}{}\doxysection{search\+\_\+in\+\_\+file.\+c File Reference}
+\label{search__in__file_8c}\index{search\_in\_file.c@{search\_in\_file.c}}
+
+
+Implmentation of updating patient info to a file.  
+
+
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../include/search\+\_\+in\+\_\+file.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/display\+\_\+single\+\_\+patient.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/add\+\_\+patient.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/advice.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/id\+\_\+generate.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/read\+\_\+patient.\+h\char`\"{}}\newline
+Include dependency graph for search\+\_\+in\+\_\+file.\+c\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{search__in__file_8c_a3552479848d874702972252ac7e3b6fa}{search\+\_\+in\+\_\+file}} (char $\ast$fname, char $\ast$str, char $\ast$ph)
+\begin{DoxyCompactList}\small\item\em After taking in the file \char`\"{}patient\+\_\+record.\+csv\char`\"{} and patient name and phone number as input, the the function will check if the patient name and phone number exists in the \char`\"{}patient\+\_\+record.\+csv\char`\"{} file. If the patient is found it displays the patient\textquotesingle{}s information on the console invoking \char`\"{}display\+\_\+single\+\_\+
+patient\char`\"{} function, otherwise it displays appropriate message. The user will be able to see if the patient is discharged by looking at the \char`\"{}\+Discharge status\char`\"{}. If the patient is already discharged the function will return to main. If the patient is not discharged, the user will be asked if the patient is being discharged. If yes it will update the \char`\"{}patient\+\_\+record.\+csv\char`\"{} file \char`\"{}\+Discharge status\char`\"{} coloum to \char`\"{}\+Yes\char`\"{} initially it is \char`\"{}\+No\char`\"{}, and stores the release date and time along with patien\textquotesingle{}s name and phone number to \char`\"{}discharged\+\_\+list.\+csv\char`\"{} file. If the patient is not discharged then the function invokes \char`\"{}\+Advice.\+c\char`\"{} to store the doctor\textquotesingle{}s advice, prescription and precaution regarding the corresponding patient. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implmentation of updating patient info to a file. 
+
+\begin{DoxyAuthor}{Author}
+Kazi Muhammad Jameel -\/ \href{mailto:kazimuhammadjaeel@cmail.carleton.ca}{\texttt{ kazimuhammadjaeel@cmail.\+carleton.\+ca}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{search__in__file_8c_a3552479848d874702972252ac7e3b6fa}\label{search__in__file_8c_a3552479848d874702972252ac7e3b6fa}} 
+\index{search\_in\_file.c@{search\_in\_file.c}!search\_in\_file@{search\_in\_file}}
+\index{search\_in\_file@{search\_in\_file}!search\_in\_file.c@{search\_in\_file.c}}
+\doxysubsubsection{\texorpdfstring{search\_in\_file()}{search\_in\_file()}}
+{\footnotesize\ttfamily int search\+\_\+in\+\_\+file (\begin{DoxyParamCaption}\item[{char $\ast$}]{fname,  }\item[{char $\ast$}]{str,  }\item[{char $\ast$}]{ph }\end{DoxyParamCaption})}
+
+
+
+After taking in the file \char`\"{}patient\+\_\+record.\+csv\char`\"{} and patient name and phone number as input, the the function will check if the patient name and phone number exists in the \char`\"{}patient\+\_\+record.\+csv\char`\"{} file. If the patient is found it displays the patient\textquotesingle{}s information on the console invoking \char`\"{}display\+\_\+single\+\_\+
+patient\char`\"{} function, otherwise it displays appropriate message. The user will be able to see if the patient is discharged by looking at the \char`\"{}\+Discharge status\char`\"{}. If the patient is already discharged the function will return to main. If the patient is not discharged, the user will be asked if the patient is being discharged. If yes it will update the \char`\"{}patient\+\_\+record.\+csv\char`\"{} file \char`\"{}\+Discharge status\char`\"{} coloum to \char`\"{}\+Yes\char`\"{} initially it is \char`\"{}\+No\char`\"{}, and stores the release date and time along with patien\textquotesingle{}s name and phone number to \char`\"{}discharged\+\_\+list.\+csv\char`\"{} file. If the patient is not discharged then the function invokes \char`\"{}\+Advice.\+c\char`\"{} to store the doctor\textquotesingle{}s advice, prescription and precaution regarding the corresponding patient. 
+
+Here the user will be able to update the \char`\"{}\+Discharge status\char`\"{} in \char`\"{}patient\+\_\+record.\+csv\char`\"{} file. To update the \char`\"{}\+Discharge status\char`\"{} a temporary file \char`\"{}temp.\+csv\char`\"{} is used. The user will also be able to maintain a list of discharged patients in \char`\"{}discharged\+\_\+list.\+csv\char`\"{} file. This files takes the following input\+: • Patient Name • Patient phone number • Date of release • Time of release 

@@ -1,0 +1,44 @@
+\hypertarget{read__patient_8c}{}\doxysection{read\+\_\+patient.\+c File Reference}
+\label{read__patient_8c}\index{read\_patient.c@{read\_patient.c}}
+
+
+Implementation of reading patient details from file.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../include/read\+\_\+patient.\+h\char`\"{}}\newline
+Include dependency graph for read\+\_\+patient.\+c\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{read__patient_8c_a2afcf6e1e9c79491fad8024874ccb04a}{read\+\_\+patient}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of reading patient details from file. 
+
+\begin{DoxyAuthor}{Author}
+sreeram sankarasubramanian -\/ \href{mailto:sreeramsankarasubram@cmail.carleton.ca}{\texttt{ sreeramsankarasubram@cmail.\+carleton.\+ca}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{read__patient_8c_a2afcf6e1e9c79491fad8024874ccb04a}\label{read__patient_8c_a2afcf6e1e9c79491fad8024874ccb04a}} 
+\index{read\_patient.c@{read\_patient.c}!read\_patient@{read\_patient}}
+\index{read\_patient@{read\_patient}!read\_patient.c@{read\_patient.c}}
+\doxysubsubsection{\texorpdfstring{read\_patient()}{read\_patient()}}
+{\footnotesize\ttfamily int read\+\_\+patient (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Reads patient details from \char`\"{}patient\+\_\+record.\+csv\char`\"{} file, if file exists. Reads line by line from the file.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em No} & input paramater. Does not take any values as input parameter.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 on successful execution and -\/1 if file doesn\textquotesingle{}t exist. 
+\end{DoxyReturn}

@@ -1,0 +1,55 @@
+\hypertarget{add__patient_8c}{}\doxysection{add\+\_\+patient.\+c File Reference}
+\label{add__patient_8c}\index{add\_patient.c@{add\_patient.c}}
+
+
+Implementation of adding patient details to file.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../include/add\+\_\+patient.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../include/id\+\_\+generate.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/disease.\+h\char`\"{}}\newline
+Include dependency graph for add\+\_\+patient.\+c\+:
+% FIG 0
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{add__patient_8c_a26325f24391d8186ad1ebd9ef33c8013}\label{add__patient_8c_a26325f24391d8186ad1ebd9ef33c8013}} 
+\#define {\bfseries memory\+\_\+size}~50
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{add__patient_8c_a17f5b829e7e7da9fae167dd063a2950b}{add\+\_\+patient}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of adding patient details to file. 
+
+\begin{DoxyAuthor}{Author}
+sreeram sankarasubramanian -\/ \href{mailto:sreeramsankarasubram@cmail.carleton.ca}{\texttt{ sreeramsankarasubram@cmail.\+carleton.\+ca}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{add__patient_8c_a17f5b829e7e7da9fae167dd063a2950b}\label{add__patient_8c_a17f5b829e7e7da9fae167dd063a2950b}} 
+\index{add\_patient.c@{add\_patient.c}!add\_patient@{add\_patient}}
+\index{add\_patient@{add\_patient}!add\_patient.c@{add\_patient.c}}
+\doxysubsubsection{\texorpdfstring{add\_patient()}{add\_patient()}}
+{\footnotesize\ttfamily void add\+\_\+patient (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here the user will be able to input all the necessary information related to the patient. Following are the information that will be collected\+: • Patient Name. • Patient Address. • Patient Contact Number and Emergency Contact number. • Date of Admission. • Time of Admission. • Disease symptoms. • Doctor attending the patient. • Patient contact details. • Unique Patient Identity. • Medication followed by Patient. • Allergies. • Discharge status (initially set as No by default)
+
+After taking all the information, patient’s symptoms will be checked to identify if he has a chronic disease or a physical injury. The hospital management will identify the symptom as chronic or physical and will pass the input accordingly. Any patient information whether admitted or not will be stored by the software in “patient\+\_\+record.\+csv” file. After storing the patient information, Disease function is invoked to check the symptoms and allocate rooms if available.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Function} & has no input parameters.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Function doesn\textquotesingle{}t return anything. 
+\end{DoxyReturn}
