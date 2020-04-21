@@ -127,10 +127,10 @@ int display_advice(char *name,int ph){
 	}
         
 	
-    	if(m != 10 && n != 0){
-        	printf("\nPhone number should be 10 digits");	        
-	}        
-    	else if(n == 0){
+    	//if(m != 10 && n != 0){
+        	//printf("\nPhone number should be 10 digits");	        
+	//}        
+    	if(n == 0){
         	//Displaying message if no records found as per entered input values
         	printf("\nNo record found!");
     	}
