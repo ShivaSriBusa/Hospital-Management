@@ -8,37 +8,38 @@ The purpose of the program is to provide efficient way to manage patient records
 
 # Authors
 
-- Soummyo Priyo Chattopadhyay - soummyopriyochattopa@cmail.carleton.ca - Carleton University
-- Shiva Sri Busa - shivasribusa@cmail.carleton.ca - Carleton University
-- Sreeram Sankarasubramanian - sreeramsankarasubram@cmail.carleton.ca - Carleton University
 - Kazi Muhammad Jameel - kazimuhammadjameel@cmail.carleton.ca - Carleton University
+- Sreeram Sankarasubramanian - sreeramsankarasubram@cmail.carleton.ca - Carleton University
+- Shiva Sri Busa - shivasribusa@cmail.carleton.ca - Carleton University
+- Soummyo Priyo Chattopadhyay - soummyopriyochattopa@cmail.carleton.ca - Carleton University
+
 
 # Installation
 
-Installation steps are mentioned in [INSTALL.md](https://github.com/ShivaSriBusa/Hospital-Management/tree/master/install.md)
+Installation steps are mentioned in [INSTALL.md](https://github.com/ShivaSriBusa/Hospital-Management/blob/master/doc/INSTALL.md)
 
 # Usage
 
 To run, you must first install it. Then you can follow instructions mentioned in
-[User_Manual.md](https://github.com/ShivaSriBusa/Hospital-Management/blob/dev/doc/User_Manual.md).
+[User_Manual.md](https://github.com/ShivaSriBusa/Hospital-Management/blob/master/doc/User_Manual.md).
 
 # File Structure
 
 File Structure 
 
 ```
+├── assets      -> Flowchart 
+├── bin 	-> Binary directory
+│   ├── HM.exe
 ├── doc 	-> Usage file
 │   ├── User_Manual.md
 │   ├── Developer_Manual.md
-├── assets      -> Flowchart 
-├── INSTALL.md 	-> Installation Guide
-├── LICENSE 	-> License file
-├── Makefile 	-> Makefile
-├── README.md 	-> Readme file
-├── bin 	-> Binary directory
-│   ├── HM.exe
-├── doc
+│   ├── INSTALL.md -> Installation Guide
 │   └── html 	-> Doxygen document
+│   ├── latex
+│   └── man/man3
+│   ├── rtf
+│   └── xml  	
 ├── include 	-> Header files
 │   ├── add_patient.h
 │   ├── add_visitor.h
@@ -57,8 +58,6 @@ File Structure
 │   └── visitor_info.h
 │   └── welcome_message.h
 ├── obj 	-> Object files
-├── sensor_fusion_config 	-> Doxygen Configuration files
-├── sensor_fusion_report.txt 	-> Report data
 ├── src 	-> Source files 
 │   ├── add_patient.c
 │   ├── add_visitor.c 
@@ -85,9 +84,9 @@ File Structure
 │   └── visitor_info.csv        -> visitor information file
 │   └── welcome_message.c       
 └── test
-│   ├── include		-> Header file for unittest
+│   ├── include		-> Header file for unit test
 │     └── test.h
-│   ├── results	        -> Results file for unittest
+│   ├── results	        -> Results file for unit test
        └── results.csv
 │   ├── patient_advice.csv      
 │   ├── test.c 
@@ -101,12 +100,16 @@ File Structure
 │   ├── test_patient_record_3.csv
 │   ├── test_special_rooms.csv     
 │   └── test_visitor_info.csv
+├── Doxyfile_config	-> Doxygen file 
+├── LICENSE 	-> License file
+├── Makefile 	-> Makefile
+├── README.md 	-> Readme file
 │            
 ```
 
 # For Developers
 
-The developer manual is available [here](https://github.com/ShivaSriBusa/Hospital-Management/tree/dev/doc/developer_manual.md).
+The developer manual is available [here](https://github.com/ShivaSriBusa/Hospital-Management/blob/master/doc/Developer_Manual.md).
 
 # License
 
@@ -114,4 +117,4 @@ This project is licensed under the GPL 2.0 License - see the LICENSE.md file for
 
 # Acknowledgements
 
-Thank to Dr. Cristina Ruiz Martin for providing guidance on how to develop the software.
+Thanks to Dr. Cristina Ruiz Martin for providing guidance on how to develop the software.
