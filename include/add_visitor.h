@@ -32,7 +32,7 @@
 
 struct visitor
 {
-    char phoneNo[size];
+    char phone_no[size];
     char *name,*address;
 }v1;
 

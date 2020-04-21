@@ -19,4 +19,4 @@
  * 
  */
 
-int readPatient();
+int read_patient();

@@ -16,8 +16,8 @@
 
 struct patient
 {
-    char phoneNo[size], emergencyNo[size];
-    char date_Adm[size], time_Adm[size], patient_identity[size], date_release[size],time_release[size];
+    char phone_no[size], emergency_no[size];
+    char date_adm[size], time_adm[size], patient_identity[size], date_release[size],time_release[size];
     char *name, *doc_name, *address, *symp, *medication, *allergies,*status;
 }p1;
 
