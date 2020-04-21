@@ -827,29 +827,17 @@ int test_display_advice(char *name,int ph){
 		}
 	}
    	if(len != 10){
-<<<<<<< HEAD
 		printf("\nPhone number should be 10 digits \n");
-=======
-		printf("\nPhone number should be 10 digits");
->>>>>>> master
 	        fclose(fp);
 	        return -1;
 	}
 	if(n != 0 && len == 10 ){
-<<<<<<< HEAD
 		printf("\nNo record found! \n");
-=======
-		printf("\nNo record found!");
->>>>>>> master
 	       	return -1;
 	}
 	if(n == 0){
 	       	//Displaying message if no records found as per entered input values
-<<<<<<< HEAD
 	       	printf("\nNo record found! \n");
-=======
-	       	printf("\nNo record found!");
->>>>>>> master
 	       	fclose(fp);
 	       	return -1;
    	}

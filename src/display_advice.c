@@ -127,15 +127,15 @@ int display_advice(char *name,int ph){
 	}
         
 	
-    	//if(m != 10 && n != 0){
-        	//printf("\nPhone number should be 10 digits");	        
+    //if(m != 10 && n != 0){
+        //printf("\nPhone number should be 10 digits");	        
 	//}        
-    	if(n == 0){
-        	//Displaying message if no records found as per entered input values
-        	printf("\nNo record found!");
-    	}
+	if(n == 0){
+        //Displaying message if no records found as per entered input values
+        printf("\nNo record found!");
+    }
 
-    	//Closing the file read is a good practice.
-    	fclose(fp);
-    	return 0;
+    //Closing the file read is a good practice.
+    fclose(fp);
+    return 0;
 }
