@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="visitor__info_8c" kind="file" language="C++">
+    <compoundname>visitor_info.c</compoundname>
+    <includes local="yes">../include/visitor_info.h</includes>
+    <includes local="yes">../include/add_visitor.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <incdepgraph>
+      <node id="5">
+        <label>stdlib.h</label>
+      </node>
+      <node id="2">
+        <label>../include/visitor_info.h</label>
+      </node>
+      <node id="1">
+        <label>visitor_info.c</label>
+        <link refid="visitor__info_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>../include/add_visitor.h</label>
+      </node>
+      <node id="4">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="visitor__info_8c_1a7fabf8c1966c64d091a76509e29c6b2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int visitor_info</definition>
+        <argsstring>(char *name, char *ph)</argsstring>
+        <name>visitor_info</name>
+        <param>
+          <type>char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>ph</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Here the user will be able to input the necessary information of the visitor. Following are the information that will be collected: • Patient Name. • Patient Phone number.</para>
+<para>After taking the visitor name and phone number as input, it will pass these parameters to add_visitor function to add visitor details if patient is admitted either in general or special ward. If with the visitor details a match is found in either of the files then the visitor details will be displayed.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">Function</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>has two input parameters.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Function returns 0 on successful exection. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="visitor_info.c" line="29" column="5" bodyfile="visitor_info.c" bodystart="29" bodyend="34"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Implementation of displaying the visitor details from the corresponding &quot;visitor.csv&quot; file. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Soummyo Priyo Chattopadhyay - <ulink url="mailto:soummyopriyochattopa@cmail.carleton.ca">soummyopriyochattopa@cmail.carleton.ca</ulink> </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="10"><highlight class="preprocessor">#include<sp/>&quot;../include/visitor_info.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/add_visitor.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="visitor__info_8c_1a7fabf8c1966c64d091a76509e29c6b2b" kindref="member">visitor_info</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name,</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*ph)</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="add__visitor_8c_1a55d6c14f7c641684fb7eb72842f4db2a" kindref="member">add_visitor</ref>(</highlight><highlight class="stringliteral">&quot;../src/general_rooms.csv&quot;</highlight><highlight class="normal">,name,ph);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="add__visitor_8c_1a55d6c14f7c641684fb7eb72842f4db2a" kindref="member">add_visitor</ref>(</highlight><highlight class="stringliteral">&quot;../src/special_rooms.csv&quot;</highlight><highlight class="normal">,name,ph);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="visitor_info.c"/>
+  </compounddef>
+</doxygen>

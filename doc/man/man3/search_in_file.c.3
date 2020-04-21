@@ -1,0 +1,59 @@
+.TH "search_in_file.c" 3 "Mon Apr 20 2020" "Hospital-Management" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+search_in_file.c \- Implmentation of updating patient info to a file\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <string\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include '\&.\&./include/search_in_file\&.h'\fP
+.br
+\fC#include '\&.\&./include/display_single_patient\&.h'\fP
+.br
+\fC#include '\&.\&./include/add_patient\&.h'\fP
+.br
+\fC#include '\&.\&./include/advice\&.h'\fP
+.br
+\fC#include '\&.\&./include/id_generate\&.h'\fP
+.br
+\fC#include '\&.\&./include/read_patient\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBsearch_in_file\fP (char *fname, char *str, char *ph)"
+.br
+.RI "After taking in the file 'patient_record\&.csv' and patient name and phone number as input, the the function will check if the patient name and phone number exists in the 'patient_record\&.csv' file\&. If the patient is found it displays the patient's information on the console invoking 'display_single_
+patient' function, otherwise it displays appropriate message\&. The user will be able to see if the patient is discharged by looking at the 'Discharge status'\&. If the patient is already discharged the function will return to main\&. If the patient is not discharged, the user will be asked if the patient is being discharged\&. If yes it will update the 'patient_record\&.csv' file 'Discharge status' coloum to 'Yes' initially it is 'No', and stores the release date and time along with patien's name and phone number to 'discharged_list\&.csv' file\&. If the patient is not discharged then the function invokes 'Advice\&.c' to store the doctor's advice, prescription and precaution regarding the corresponding patient\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Implmentation of updating patient info to a file\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Kazi Muhammad Jameel - kazimuhammadjaeel@cmail.carleton.ca 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "int search_in_file (char * fname, char * str, char * ph)"
+
+.PP
+After taking in the file 'patient_record\&.csv' and patient name and phone number as input, the the function will check if the patient name and phone number exists in the 'patient_record\&.csv' file\&. If the patient is found it displays the patient's information on the console invoking 'display_single_
+patient' function, otherwise it displays appropriate message\&. The user will be able to see if the patient is discharged by looking at the 'Discharge status'\&. If the patient is already discharged the function will return to main\&. If the patient is not discharged, the user will be asked if the patient is being discharged\&. If yes it will update the 'patient_record\&.csv' file 'Discharge status' coloum to 'Yes' initially it is 'No', and stores the release date and time along with patien's name and phone number to 'discharged_list\&.csv' file\&. If the patient is not discharged then the function invokes 'Advice\&.c' to store the doctor's advice, prescription and precaution regarding the corresponding patient\&. Here the user will be able to update the 'Discharge status' in 'patient_record\&.csv' file\&. To update the 'Discharge status' a temporary file 'temp\&.csv' is used\&. The user will also be able to maintain a list of discharged patients in 'discharged_list\&.csv' file\&. This files takes the following input: • Patient Name • Patient phone number • Date of release • Time of release 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hospital-Management from the source code\&.

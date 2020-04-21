@@ -1,0 +1,69 @@
+.TH "rooms.c" 3 "Mon Apr 20 2020" "Hospital-Management" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+rooms.c \- A collection of functions related to the checking availability of rooms for admitted patients\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include '\&.\&./include/rooms\&.h'\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include '\&.\&./include/id_generate\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBgeneral_rooms\fP ()"
+.br
+.RI "A function to read the file 'general_rooms\&.csv' and retun availability in general ward\&. "
+.ti -1c
+.RI "int \fBspecial_rooms\fP ()"
+.br
+.RI "A function to read the file 'special_rooms\&.csv' and return availability in special ward\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+A collection of functions related to the checking availability of rooms for admitted patients\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+sreeram sankarasubramanian - sreeramsankarasubram@cmail.carleton.ca 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "int general_rooms ()"
+
+.PP
+A function to read the file 'general_rooms\&.csv' and retun availability in general ward\&. room capacity is only for 10 patients\&. Checks if space is available in 'general_rooms\&.csv'\&. If available, returns flag value as signal to disease function\&. Disease function process this signal and stores patient details in 'general_rooms\&.csv' file\&. If it returns a flag for no availability, then appropriate message is displayed\&.
+.PP
+\fBReturns\fP
+.RS 4
+Returns 0 if no availability else returns 1, if room is available\&. 
+.RE
+.PP
+
+.SS "int special_rooms ()"
+
+.PP
+A function to read the file 'special_rooms\&.csv' and return availability in special ward\&. room capacity is only for 10 patients\&. Checks if space is available in 'special_rooms\&.csv'\&. If available, returns flag value as signal to disease function\&. Disease function process this signal and stores patient details in 'special_rooms\&.csv' file\&. If it returns a flag for no availability, then appropriate message is displayed\&.
+.PP
+\fBReturns\fP
+.RS 4
+Returns 0 if no availability else returns 1 if room is available\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hospital-Management from the source code\&.

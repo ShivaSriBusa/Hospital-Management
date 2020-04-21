@@ -1,0 +1,60 @@
+.TH "add_visitor.c" 3 "Mon Apr 20 2020" "Hospital-Management" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+add_visitor.c \- Implementation of adding the visitor details to the corresponding file\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include '\&.\&./include/add_visitor\&.h'\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include '\&.\&./include/id_generate\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBadd_visitor\fP (char *filename, char *str, char *ph)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Implementation of adding the visitor details to the corresponding file\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Soummyo Priyo Chattopadhyay - soummyopriyochattopa@cmail.carleton.ca 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "int add_visitor (char * filename, char * str, char * ph)"
+Here the user will be able to input the necessary information i\&.e\&. the patient id of the patient and the all the relevant details of the visitor\&. Following are the information that will be collected: • Patient id\&. • Visitor Name\&. • Visitor Address\&. • Visitor Phone number\&.
+.PP
+After taking the patient id as input, it will check if the patient is admitted in the hospital at that particular moment\&. If with the patient id a match is found in the 'general_rooms\&.csv' and 'special_rooms\&.csv'\&. Then the visitor details will be taken as an input and stored in the 'visitor_info\&.csv' file\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIFunction\fP has three input parameters\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Function returns -1 if the file 'visitor_info\&.csv' is not found\&. Stores information and returns 0 on successful execution\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hospital-Management from the source code\&.

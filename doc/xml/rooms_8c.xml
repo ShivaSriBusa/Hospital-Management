@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="rooms_8c" kind="file" language="C++">
+    <compoundname>rooms.c</compoundname>
+    <includes local="yes">../include/rooms.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="yes">../include/id_generate.h</includes>
+    <incdepgraph>
+      <node id="4">
+        <label>stdlib.h</label>
+      </node>
+      <node id="2">
+        <label>../include/rooms.h</label>
+      </node>
+      <node id="5">
+        <label>../include/id_generate.h</label>
+      </node>
+      <node id="1">
+        <label>rooms.c</label>
+        <link refid="rooms_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="rooms_8c_1a6a4b39ea87d4c54d67976476c6b0679a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int general_rooms</definition>
+        <argsstring>()</argsstring>
+        <name>general_rooms</name>
+        <briefdescription>
+<para>A function to read the file &quot;general_rooms.csv&quot; and retun availability in general ward. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>room capacity is only for 10 patients. Checks if space is available in &quot;general_rooms.csv&quot;. If available, returns flag value as signal to disease function. Disease function process this signal and stores patient details in &quot;general_rooms.csv&quot; file. If it returns a flag for no availability, then appropriate message is displayed.</para>
+<para><simplesect kind="return"><para>Returns 0 if no availability else returns 1, if room is available. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rooms.c" line="26" column="5" bodyfile="rooms.c" bodystart="26" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="rooms_8c_1a561813102158d7e4350807f11c4e81c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int special_rooms</definition>
+        <argsstring>()</argsstring>
+        <name>special_rooms</name>
+        <briefdescription>
+<para>A function to read the file &quot;special_rooms.csv&quot; and return availability in special ward. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>room capacity is only for 10 patients. Checks if space is available in &quot;special_rooms.csv&quot;. If available, returns flag value as signal to disease function. Disease function process this signal and stores patient details in &quot;special_rooms.csv&quot; file. If it returns a flag for no availability, then appropriate message is displayed.</para>
+<para><simplesect kind="return"><para>Returns 0 if no availability else returns 1 if room is available. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rooms.c" line="62" column="5" bodyfile="rooms.c" bodystart="62" bodyend="87"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A collection of functions related to the checking availability of rooms for admitted patients. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>sreeram sankarasubramanian - <ulink url="mailto:sreeramsankarasubram@cmail.carleton.ca">sreeramsankarasubram@cmail.carleton.ca</ulink> </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="10"><highlight class="preprocessor">#include<sp/>&quot;../include/rooms.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/id_generate.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="rooms_8c_1a6a4b39ea87d4c54d67976476c6b0679a" kindref="member">general_rooms</ref>(){</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">=<ref refid="id__generate_8c_1a8a8596d1bcc4d0c1f69fb4e5c26e1292" kindref="member">id_generate</ref>(</highlight><highlight class="stringliteral">&quot;../src/general_rooms.csv&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>FILE<sp/>*fptr;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>fptr<sp/>=<sp/>fopen(</highlight><highlight class="stringliteral">&quot;../src/general_rooms.csv&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;r&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Throwing<sp/>error<sp/>if<sp/>file<sp/>doesn&apos;t<sp/>exists.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(fptr<sp/>==<sp/>NULL){</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Error!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(1);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Checking<sp/>if<sp/>there<sp/>is<sp/>space<sp/>in<sp/>general<sp/>ward<sp/>to<sp/>accomodate<sp/>a<sp/>patient<sp/>.<sp/>MAX<sp/>Capacity<sp/>-<sp/>10<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>&gt;<sp/>10){</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;No<sp/>Rooms<sp/>available<sp/>in<sp/>general<sp/>ward&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fclose(fptr);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Patient<sp/>can<sp/>be<sp/>Admitted<sp/>in<sp/>general<sp/>ward&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fclose(fptr);<sp/><sp/></highlight><highlight class="comment">/*<sp/>Closing<sp/>file<sp/>is<sp/>a<sp/>good<sp/>practice<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="rooms_8c_1a561813102158d7e4350807f11c4e81c1" kindref="member">special_rooms</ref>(){</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">=<ref refid="id__generate_8c_1a8a8596d1bcc4d0c1f69fb4e5c26e1292" kindref="member">id_generate</ref>(</highlight><highlight class="stringliteral">&quot;../src/special_rooms.csv&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>FILE<sp/>*fptr;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>fptr<sp/>=<sp/>fopen(</highlight><highlight class="stringliteral">&quot;../src/special_rooms.csv&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;r&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Throwing<sp/>error<sp/>if<sp/>file<sp/>doesn&apos;t<sp/>exists.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fptr<sp/>==<sp/>NULL){</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Error!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(1);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Checking<sp/>if<sp/>there<sp/>is<sp/>space<sp/>in<sp/>special<sp/>ward<sp/>to<sp/>accomodate<sp/>a<sp/>patient<sp/>.<sp/>MAX<sp/>Capacity<sp/>-<sp/>10<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>&gt;<sp/>10){</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;No<sp/>Rooms<sp/>available<sp/>in<sp/>special<sp/>ward&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fclose(fptr);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Patient<sp/>can<sp/>be<sp/>Admitted<sp/>in<sp/>special<sp/>ward&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fclose(fptr);<sp/></highlight><highlight class="comment">/*<sp/>Closing<sp/>file<sp/>is<sp/>a<sp/>good<sp/>practice<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="rooms.c"/>
+  </compounddef>
+</doxygen>

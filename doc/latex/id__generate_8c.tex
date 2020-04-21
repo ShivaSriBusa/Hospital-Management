@@ -1,0 +1,49 @@
+\hypertarget{id__generate_8c}{}\doxysection{id\+\_\+generate.\+c File Reference}
+\label{id__generate_8c}\index{id\_generate.c@{id\_generate.c}}
+
+
+A Function related to the allocation of rooms for admitted patients.  
+
+
+{\ttfamily \#include \char`\"{}../include/id\+\_\+generate.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+Include dependency graph for id\+\_\+generate.\+c\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{id__generate_8c_a8a8596d1bcc4d0c1f69fb4e5c26e1292}{id\+\_\+generate}} (char $\ast$file)
+\begin{DoxyCompactList}\small\item\em A function to generate new row number for file passed as an input. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A Function related to the allocation of rooms for admitted patients. 
+
+\begin{DoxyAuthor}{Author}
+sreeram sankarasubramanian -\/ \href{mailto:sreeramsankarasubram@cmail.carleton.ca}{\texttt{ sreeramsankarasubram@cmail.\+carleton.\+ca}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{id__generate_8c_a8a8596d1bcc4d0c1f69fb4e5c26e1292}\label{id__generate_8c_a8a8596d1bcc4d0c1f69fb4e5c26e1292}} 
+\index{id\_generate.c@{id\_generate.c}!id\_generate@{id\_generate}}
+\index{id\_generate@{id\_generate}!id\_generate.c@{id\_generate.c}}
+\doxysubsubsection{\texorpdfstring{id\_generate()}{id\_generate()}}
+{\footnotesize\ttfamily int id\+\_\+generate (\begin{DoxyParamCaption}\item[{char $\ast$}]{file }\end{DoxyParamCaption})}
+
+
+
+A function to generate new row number for file passed as an input. 
+
+This function reads the file passed as an input and counts number of rows in it, it is then used to generate new row number for the file which we pass as input.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em It} & takes file name as input parameter.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns integer(new row number) on successful execution and -\/1 if file doesm\textquotesingle{}t exist. 
+\end{DoxyReturn}

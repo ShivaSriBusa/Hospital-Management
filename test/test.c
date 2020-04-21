@@ -827,17 +827,29 @@ int test_display_advice(char *name,int ph){
 		}
 	}
    	if(len != 10){
+<<<<<<< HEAD
 		printf("\nPhone number should be 10 digits \n");
+=======
+		printf("\nPhone number should be 10 digits");
+>>>>>>> master
 	        fclose(fp);
 	        return -1;
 	}
 	if(n != 0 && len == 10 ){
+<<<<<<< HEAD
 		printf("\nNo record found! \n");
+=======
+		printf("\nNo record found!");
+>>>>>>> master
 	       	return -1;
 	}
 	if(n == 0){
 	       	//Displaying message if no records found as per entered input values
+<<<<<<< HEAD
 	       	printf("\nNo record found! \n");
+=======
+	       	printf("\nNo record found!");
+>>>>>>> master
 	       	fclose(fp);
 	       	return -1;
    	}
@@ -1267,6 +1279,7 @@ int all_test_case(){
 
         	case 8:
     			/* Testing count of admitted patients */
+<<<<<<< HEAD
                		/* Test case 1  - check for total count of admitted patients if file exists */
 			fptr1 = "../test/test_general_rooms.csv";
     			fptr2 = "../test/test_special_rooms.csv";
@@ -1326,6 +1339,68 @@ int all_test_case(){
 				fprintf(test_result,t);
                		}
                		break;
+=======
+               	/* Test case 1  - check for total count of admitted patients if file exists */
+				fptr1 = "../test/test_general_rooms.csv";
+    			fptr2 = "../test/test_special_rooms.csv";
+               	count = test_count_admit(fptr1,fptr2);
+				if(count != -1){
+					char t[100];
+               		sprintf(t,"1)PASS: Input: Valid File, Expected Output: %d, Output: %d .\n",1,count-2);
+               		/* Expected output is 1 as there is only 1 patient admitted.
+               		count is decremented by 2 to exclude the header */
+                    printf(t);
+                    fprintf(test_result,t);
+                }
+                else{
+                	char t[100];
+                    sprintf(t,"2)FAIL: Input: Valid File, Expected Output: %d, Output: %d .\n",1,count);
+                    /* Expected output is 1 as there is only 1 patient admitted. */
+                   	printf(t);
+                    fprintf(test_result,t);
+                }
+
+                /* Test case 2  - check for Invalid file */
+
+				fptr1 = "../test/general_rooms.csv";
+				fptr2 = "../test/special_rooms.csv";
+				count = test_count_admit(fptr1,fptr2);
+				if(count == -1){
+					char t[100];
+					sprintf(t,"1)PASS: Input: Invalid File, Expected Output: %d, Output: %d .\n",-1,count);
+					/* Expected output is -1 for invalid file.*/
+					printf(t);
+					fprintf(test_result,t);
+				}
+	            else{
+					char t[100];
+					sprintf(t,"2)FAIL: Input: Invalid File, Expected Output: %d, Output: %d .\n",-1,count);
+					/* Expected output will be -1 if file is not available */
+					printf(t);
+					fprintf(test_result,t);
+                }
+
+               /* Test case 3  - check for empty file */
+
+				fptr1 = "../test/test_general_rooms_1.csv";
+				fptr2 = "../test/test_special_rooms_1.csv";
+				count = test_count_admit(fptr1,fptr2);
+				if(count == 0){
+					char t[100];
+					sprintf(t,"1)PASS: Input: Empty File, Expected Output: %d, Output: %d .\n",0,count);
+					/* Expected output is 0 for empty file.*/
+					printf(t);
+					fprintf(test_result,t);
+				}
+	            else{
+			   		char t[100];
+			        sprintf(t,"2)FAIL: Input: Empty File, Expected Output: %d, Output: %d .\n",0,count);
+   			        /* Expected output will be 0 if file is empty */
+			        printf(t);
+					fprintf(test_result,t);
+               }
+               break;
+>>>>>>> master
 
         	case 9:
                 	/* Testing search of patient from patient's record */
@@ -1359,6 +1434,7 @@ int all_test_case(){
         	case 10:
         		/* Testing display advice of patient */
         		/* general Test case  - check for patient advice if file exists */
+<<<<<<< HEAD
                		fgetc(stdin);
          	  	int number;
                 	t_p1.name = (char *)malloc(memory_size);
@@ -1368,6 +1444,17 @@ int all_test_case(){
                 	scanf("%d",&number);
          		count = test_display_advice("p1.name",number); // passing valid inputs
                 	//free(t_p1.name);
+=======
+               	fgetc(stdin);
+         	  	int number;
+                t_p1.name = (char *)malloc(memory_size);
+                printf("\nPlease input patient name: ");
+                gets(t_p1.name);
+                printf("\nPlease input patient phone number: ");
+                scanf("%d",&number);
+         		count = test_display_advice("p1.name",number); // passing valid inputs
+                //free(t_p1.name);
+>>>>>>> master
 			if(count == -1){
                     		char t[100];
                     		sprintf(t,"1)PASS: Input: Valid Inputs, Expected Output: %d, Output: %d .\n",-1,count);

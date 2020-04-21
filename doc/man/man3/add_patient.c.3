@@ -1,0 +1,69 @@
+.TH "add_patient.c" 3 "Mon Apr 20 2020" "Hospital-Management" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+add_patient.c \- Implementation of adding patient details to file\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include '\&.\&./include/add_patient\&.h'\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include '\&.\&./include/id_generate\&.h'\fP
+.br
+\fC#include '\&.\&./include/disease\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBmemory_size\fP   50"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBadd_patient\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Implementation of adding patient details to file\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+sreeram sankarasubramanian - sreeramsankarasubram@cmail.carleton.ca 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "void add_patient ()"
+Here the user will be able to input all the necessary information related to the patient\&. Following are the information that will be collected: • Patient Name\&. • Patient Address\&. • Patient Contact Number and Emergency Contact number\&. • Date of Admission\&. • Time of Admission\&. • Disease symptoms\&. • Doctor attending the patient\&. • Patient contact details\&. • Unique Patient Identity\&. • Medication followed by Patient\&. • Allergies\&. • Discharge status (initially set as No by default)
+.PP
+After taking all the information, patient’s symptoms will be checked to identify if he has a chronic disease or a physical injury\&. The hospital management will identify the symptom as chronic or physical and will pass the input accordingly\&. Any patient information whether admitted or not will be stored by the software in “patient_record\&.csv” file\&. After storing the patient information, Disease function is invoked to check the symptoms and allocate rooms if available\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIFunction\fP has no input parameters\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Function doesn't return anything\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hospital-Management from the source code\&.
