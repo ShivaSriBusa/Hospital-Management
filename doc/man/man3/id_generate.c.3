@@ -1,0 +1,59 @@
+.TH "id_generate.c" 3 "Mon Apr 20 2020" "Hospital-Management" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+id_generate.c \- A Function related to the allocation of rooms for admitted patients\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include '\&.\&./include/id_generate\&.h'\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBid_generate\fP (char *file)"
+.br
+.RI "A function to generate new row number for file passed as an input\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+A Function related to the allocation of rooms for admitted patients\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+sreeram sankarasubramanian - sreeramsankarasubram@cmail.carleton.ca 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "int id_generate (char * file)"
+
+.PP
+A function to generate new row number for file passed as an input\&. This function reads the file passed as an input and counts number of rows in it, it is then used to generate new row number for the file which we pass as input\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIIt\fP takes file name as input parameter\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns integer(new row number) on successful execution and -1 if file doesm't exist\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hospital-Management from the source code\&.

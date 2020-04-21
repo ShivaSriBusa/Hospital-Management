@@ -1,0 +1,54 @@
+.TH "read_patient.c" 3 "Mon Apr 20 2020" "Hospital-Management" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+read_patient.c \- Implementation of reading patient details from file\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include '\&.\&./include/read_patient\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBread_patient\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Implementation of reading patient details from file\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+sreeram sankarasubramanian - sreeramsankarasubram@cmail.carleton.ca 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "int read_patient ()"
+Reads patient details from 'patient_record\&.csv' file, if file exists\&. Reads line by line from the file\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fINo\fP input paramater\&. Does not take any values as input parameter\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns 0 on successful execution and -1 if file doesn't exist\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hospital-Management from the source code\&.

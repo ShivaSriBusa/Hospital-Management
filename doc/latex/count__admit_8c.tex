@@ -1,0 +1,45 @@
+\hypertarget{count__admit_8c}{}\doxysection{count\+\_\+admit.\+c File Reference}
+\label{count__admit_8c}\index{count\_admit.c@{count\_admit.c}}
+
+
+Implementation of counting the number of patients admitted in the hospital.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../include/count\+\_\+admit.\+h\char`\"{}}\newline
+Include dependency graph for count\+\_\+admit.\+c\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{count__admit_8c_a23c32e1f0efb2f5e91178d15bdf731e4}{count\+\_\+admit}} (char $\ast$f1name, char $\ast$f2name)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of counting the number of patients admitted in the hospital. 
+
+\begin{DoxyAuthor}{Author}
+Soummyo Priyo Chattopadhyay -\/ \href{mailto:soummyopriyochattopa@cmail.carleton.ca}{\texttt{ soummyopriyochattopa@cmail.\+carleton.\+ca}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{count__admit_8c_a23c32e1f0efb2f5e91178d15bdf731e4}\label{count__admit_8c_a23c32e1f0efb2f5e91178d15bdf731e4}} 
+\index{count\_admit.c@{count\_admit.c}!count\_admit@{count\_admit}}
+\index{count\_admit@{count\_admit}!count\_admit.c@{count\_admit.c}}
+\doxysubsubsection{\texorpdfstring{count\_admit()}{count\_admit()}}
+{\footnotesize\ttfamily int count\+\_\+admit (\begin{DoxyParamCaption}\item[{char $\ast$}]{f1name,  }\item[{char $\ast$}]{f2name }\end{DoxyParamCaption})}
+
+The function reads the \char`\"{}general\+\_\+rooms.\+csv\char`\"{} and “special\+\_\+rooms.\+csv” file and counts the total number of patients admitted in the hospital.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Function} & has no input parameters.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Function returns total number of patients (positive integer) as count on successful execution and returns -\/1 if the file cannot be opened. 
+\end{DoxyReturn}

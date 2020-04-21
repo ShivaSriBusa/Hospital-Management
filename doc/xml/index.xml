@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.18">
+  <compound refid="add__patient_8c" kind="file"><name>add_patient.c</name>
+    <member refid="add__patient_8c_1a26325f24391d8186ad1ebd9ef33c8013" kind="define"><name>memory_size</name></member>
+    <member refid="add__patient_8c_1a17f5b829e7e7da9fae167dd063a2950b" kind="function"><name>add_patient</name></member>
+  </compound>
+  <compound refid="add__visitor_8c" kind="file"><name>add_visitor.c</name>
+    <member refid="add__visitor_8c_1a55d6c14f7c641684fb7eb72842f4db2a" kind="function"><name>add_visitor</name></member>
+  </compound>
+  <compound refid="advice_8c" kind="file"><name>advice.c</name>
+    <member refid="advice_8c_1ad2a01315dddf34cb1a1c2ad4a4600330" kind="function"><name>advice</name></member>
+  </compound>
+  <compound refid="count__admit_8c" kind="file"><name>count_admit.c</name>
+    <member refid="count__admit_8c_1a23c32e1f0efb2f5e91178d15bdf731e4" kind="function"><name>count_admit</name></member>
+  </compound>
+  <compound refid="count__visitor_8c" kind="file"><name>count_visitor.c</name>
+    <member refid="count__visitor_8c_1afc48cb09c72be7522bec624ae8cbaa8e" kind="function"><name>count_visitor</name></member>
+  </compound>
+  <compound refid="disease_8c" kind="file"><name>disease.c</name>
+    <member refid="disease_8c_1a7a1119e1ec303a8dcfc8e3c2f87804cc" kind="function"><name>disease</name></member>
+  </compound>
+  <compound refid="display__advice_8c" kind="file"><name>display_advice.c</name>
+    <member refid="display__advice_8c_1a2887d87a3b3c5fce68c6b11c568011b8" kind="function"><name>display_advice</name></member>
+  </compound>
+  <compound refid="display__single__patient_8c" kind="file"><name>display_single_patient.c</name>
+    <member refid="display__single__patient_8c_1ac74f07a660d8061739b2126a2e855d76" kind="function"><name>display_single_patient</name></member>
+  </compound>
+  <compound refid="display__single__visitor_8c" kind="file"><name>display_single_visitor.c</name>
+    <member refid="display__single__visitor_8c_1a5121a6d9deb1fc82cc2c5ee773080c94" kind="function"><name>display_single_visitor</name></member>
+  </compound>
+  <compound refid="id__generate_8c" kind="file"><name>id_generate.c</name>
+    <member refid="id__generate_8c_1a8a8596d1bcc4d0c1f69fb4e5c26e1292" kind="function"><name>id_generate</name></member>
+  </compound>
+  <compound refid="read__patient_8c" kind="file"><name>read_patient.c</name>
+    <member refid="read__patient_8c_1a2afcf6e1e9c79491fad8024874ccb04a" kind="function"><name>read_patient</name></member>
+  </compound>
+  <compound refid="rooms_8c" kind="file"><name>rooms.c</name>
+    <member refid="rooms_8c_1a6a4b39ea87d4c54d67976476c6b0679a" kind="function"><name>general_rooms</name></member>
+    <member refid="rooms_8c_1a561813102158d7e4350807f11c4e81c1" kind="function"><name>special_rooms</name></member>
+  </compound>
+  <compound refid="search__in__file_8c" kind="file"><name>search_in_file.c</name>
+    <member refid="search__in__file_8c_1a3552479848d874702972252ac7e3b6fa" kind="function"><name>search_in_file</name></member>
+  </compound>
+  <compound refid="source_8c" kind="file"><name>source.c</name>
+    <member refid="source_8c_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="test__details_8c" kind="file"><name>test_details.c</name>
+    <member refid="test__details_8c_1a9842480d4dc41a6c448b4ea33a5e51e8" kind="function"><name>display_test</name></member>
+  </compound>
+  <compound refid="visitor__info_8c" kind="file"><name>visitor_info.c</name>
+    <member refid="visitor__info_8c_1a7fabf8c1966c64d091a76509e29c6b2b" kind="function"><name>visitor_info</name></member>
+  </compound>
+  <compound refid="welcome__message_8c" kind="file"><name>welcome_message.c</name>
+    <member refid="welcome__message_8c_1ae9cf07cdcd9e6084bf86b1ffa5e031ba" kind="function"><name>welcome_message</name></member>
+  </compound>
+</doxygenindex>
