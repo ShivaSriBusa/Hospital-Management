@@ -64,7 +64,7 @@ File Structure
 │   ├── advice.c
 │   ├── count_admit.c
 │   ├── count_visitor.c
-│   └── discharged_list.csv     -> dischaged list file 
+│   └── discharged_list.csv     -> discharged list file 
 │   ├── disease.c
 │   ├── display_advice.c 
 │   ├── display_single_patient.c
